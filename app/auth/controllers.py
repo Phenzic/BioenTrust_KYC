@@ -17,12 +17,14 @@ class AuthController:
             "last_name": request.json["last_name"],
             "email": request.json["email"],
             "password": request.json["password"],
-            "wallet": 0
+            # "wallet": 0
         }
 
         if User.find_by_email(user["email"]):
             return jsonify({"error": "Email address already in use"}), 409
-        elif len(user['password']) < 8:
+        
+        password = str(user['password'])        
+        if len(password) < 8:
             return jsonify({"error": "Password should be more than 7 characters"}), 400
 
         new_user = User(**user)

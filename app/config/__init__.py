@@ -9,6 +9,14 @@ class Config:
     CORS_ORIGINS = "*"
     MONGO_URI = os.getenv("MONGO_URI")
     REDIS_HOST = os.getenv("REDIS_CLIENT")
+    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USE_SSL = False
+    MAIL_USERNAME = os.getenv("MAIL_USERNAME")
+    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
+    MAIL_DEFAULT_SENDER = os.getenv("MAIL_USERNAME")
+
     # app.config['CACHE_TYPE'] = 'redis'
     # app.config['CACHE_REDIS_HOST'] = 'localhost'
     # app.config['CACHE_REDIS_PORT'] = 6379

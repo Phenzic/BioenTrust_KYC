@@ -19,7 +19,6 @@ def home():
         return jsonify(error_message), 500
 
 
-
 @auth.route("/signup", methods=["POST"])
 def signup():
     return AuthController.signup(request)

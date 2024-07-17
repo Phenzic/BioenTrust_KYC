@@ -6,5 +6,13 @@ mail = Mail()
 
 def init_utils(app):
     mail.init_app(app)
-    
-redis_client = redis.StrictRedis(host=Config.REDIS_HOST)
+
+
+redis_client = redis.StrictRedis.from_url(Config.REDIS_HOST)
+
+try:
+    redis_client.ping()
+    print("Connected to Redis Succesfully")
+except redis.ConnectionError as e:
+    print((f"Could not connect to Redis {e}"))
+
