@@ -13,11 +13,12 @@ class AuthController:
     @staticmethod
     def signup(request):
         user = {
+            "_id": uuid.uuid4().hex,
             "first_name": request.json["first_name"],
             "last_name": request.json["last_name"],
             "email": request.json["email"],
             "password": request.json["password"],
-            # "wallet": 0
+            "wallet": 0
         }
 
         if User.find_by_email(user["email"]):
@@ -44,6 +45,7 @@ class AuthController:
         otp_request_id = request.json["otp_request_id"]
 
         email_otp = redis_handler.get_otp(otp_request_id)
+        print(email_otp, user_otp)
 
         if int(email_otp) == int(user_otp):
             user_data = redis_handler.get_user(otp_request_id)

@@ -3,13 +3,13 @@ from passlib.hash import pbkdf2_sha256
 from flask import current_app as app
 
 class User:
-    def __init__(self, first_name, last_name, email, password):
-        self._id = uuid.uuid4().hex
+    def __init__(self, _id, first_name, last_name, email, password, wallet=0):
+        self._id =  _id
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
         self.password = pbkdf2_sha256.hash(password)
-        self.wallet = 0
+        self.wallet = wallet
 
     @staticmethod
     def find_by_email(email):
@@ -36,7 +36,7 @@ class ClientApp:
         self.apps = []
 
     def save_to_db(self):
-        db = app.db.users
+        db = app.db.client
         return db["client_data"].insert_one(self.to_dict())
 
     def to_dict(self):
@@ -58,5 +58,5 @@ class ServiceCharge:
     def to_dict(self):
         return {
             "_id": self._id,
-            "email": self.apps
+            "email": self.email
         }
