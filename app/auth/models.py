@@ -29,6 +29,7 @@ class User:
             "password": self.password,
             "wallet": self.wallet
         }
+    
 
 class ClientApp:
     def __init__(self, user_id):

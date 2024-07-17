@@ -26,3 +26,9 @@ def signup():
 @auth.route("/verify-email", methods=["POST"])
 def verify_email():
     return AuthController.verify_email(request)
+
+
+@auth.route("/signin", methods=["POST"])
+def signin():
+    return AuthController.signin(request)
+

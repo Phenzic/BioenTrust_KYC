@@ -1,6 +1,7 @@
 from .models import User, ClientApp, ServiceCharge
 from flask import jsonify
 import uuid
+from passlib.hash import pbkdf2_sha256
 from flask_jwt_extended import create_access_token, create_refresh_token
 from ..utils.redis_handler import redis_handler
 from ..utils.otp_handler import otp_handler
@@ -45,7 +46,6 @@ class AuthController:
         otp_request_id = request.json["otp_request_id"]
 
         email_otp = redis_handler.get_otp(otp_request_id)
-        print(email_otp, user_otp)
 
         if int(email_otp) == int(user_otp):
             user_data = redis_handler.get_user(otp_request_id)
@@ -74,3 +74,26 @@ class AuthController:
             ), 200
         else:
             return jsonify({"error": "Signup Failed"}), 401
+
+
+    @staticmethod
+    def signin(request):
+        email = request.json["email"]
+        password = str(request.json["password"])
+        user = User.find_by_email(email)
+        print(pbkdf2_sha256.verify(password, user["password"]))
+        if user and pbkdf2_sha256.verify(password, user["password"]):
+            print("yes")
+            access_token = create_access_token(identity=user["_id"])
+            refresh_token = create_refresh_token(identity=user["_id"])
+            return jsonify(
+                {
+                    "message": "Logged In",
+                    "token": {
+                        "access": access_token,
+                        "refresh": refresh_token
+                        }
+                }
+            ), 200
+            
+        return jsonify({"error": "Invalid login credentials"}), 401
