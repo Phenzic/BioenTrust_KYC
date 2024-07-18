@@ -1,8 +1,3 @@
-
-`autopep8 --in-place --aggressive --aggressive --recursive . --exclude venv` or `black .` 
-
-to format
-
 # BioEntrust Server Requests
 
 ## Table of Contents
@@ -80,6 +75,7 @@ Configuration settings can be adjusted in the `/config` dir. Make sure to set th
    ```bash
    autopep8 --in-place --aggressive --aggressive --recursive .
    ```
+   or use `blacm .`
 
 3. Add your changes:
 
