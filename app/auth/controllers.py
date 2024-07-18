@@ -1,13 +1,13 @@
 import datetime
-from .models import User, ClientApp, ServiceCharge
-from flask import jsonify
+from .models import User, ClientApp, ServiceCharge, TokenBlocklist, EmailService
+from flask import jsonify, render_template, request
 import uuid
 from passlib.hash import pbkdf2_sha256
-from flask_jwt_extended import create_access_token, create_refresh_token
+from flask_jwt_extended import create_access_token, create_refresh_token, decode_token, get_jwt_identity, get_jwt, jwt_required
 from ..utils.redis_handler import redis_handler
 from ..utils.otp_handler import otp_handler
 from .models import ClientUser
-
+from ..config import Config
 
 class AuthController:
     @staticmethod
@@ -115,3 +115,68 @@ class AuthController:
             new_request["requestTime"] = datetime.strptime(new_request["requestTime"], "%Y-%m-%dT%H:%M:%S.%fZ")
             ClientUser.insert_new_request(new_request)
             return jsonify({"error": "Invalid OTP key"}), 400
+
+
+    @staticmethod
+    def check_if_token_is_revoked(jwt_header, jwt_payload: dict):
+        jti = jwt_payload["jti"]
+        return TokenBlocklist.is_token_revoked(jti)
+
+    @staticmethod
+    @jwt_required(refresh=True)
+    def logout():
+        token = get_jwt()
+        jti = token["jti"]
+        ttype = token["type"]
+        TokenBlocklist.add_to_blocklist(jti, Config['ACCESS_EXPIRES'])
+        return jsonify(msg=f"{ttype.capitalize()} token successfully revoked"), 200
+
+    @staticmethod
+    @jwt_required(refresh=True)
+    def refresh_access():
+        identity = get_jwt_identity()
+        new_access_token = create_access_token(identity=identity)
+        return jsonify({"access": new_access_token})
+
+
+
+    @staticmethod
+    def forgot_password():
+        email = request.json["email"]
+        url = request.host_url + "reset-password/"
+
+        client = User.find_by_email(email)
+        if not client:
+            return jsonify({"error": "Invalid email"}), 400
+
+        client_id = client["_id"]
+        expires = datetime.timedelta(hours=1)
+        new_access_token = create_access_token(identity=client_id, expires_delta=expires)
+
+        EmailService.send_password_reset(
+            email,
+            "Reset Your Password",
+            "mlsayabatech@gmail.com",
+            [email],
+            render_template("email/reset_password.txt", url=url + new_access_token, name=client["first_name"]),
+            render_template("email/reset_password.html", url=url + new_access_token, name=client["first_name"])
+        )
+
+        return jsonify({"message": "Password reset link sent to your email"}), 200
+
+
+
+    @staticmethod
+    def reset_password(token):
+        try:
+            client_id = decode_token(token)['sub']
+            user = User.find_by_id(client_id)
+
+            if user:
+                new_password = request.json["password"]
+                User.update_password(client_id, new_password)
+                return jsonify({"message": "Password reset successful"}), 200
+            else:
+                return jsonify({"error": "Invalid token"}), 401
+        except Exception as e:
+            return jsonify({"error": str(e)}), 400

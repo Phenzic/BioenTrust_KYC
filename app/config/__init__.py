@@ -1,3 +1,4 @@
+from datetime import timedelta
 import os
 
 
@@ -16,6 +17,8 @@ class Config:
     MAIL_USERNAME = os.getenv("MAIL_USERNAME")
     MAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
     MAIL_DEFAULT_SENDER = os.getenv("MAIL_USERNAME")
+    ACCESS_EXPIRES = timedelta(hours=1)
+
 
     # app.config['CACHE_TYPE'] = 'redis'
     # app.config['CACHE_REDIS_HOST'] = 'localhost'

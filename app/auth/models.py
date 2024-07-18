@@ -1,7 +1,7 @@
 import uuid
 from passlib.hash import pbkdf2_sha256
 from flask import current_app as app
-
+from ..utils.otp_handler import otp_handler
 
 class User:
     def __init__(self, _id, first_name, last_name, email, password, wallet=0):
@@ -11,6 +11,14 @@ class User:
         self.email = email
         self.password = password
         self.wallet = wallet
+
+    @staticmethod
+    def find_by_id(user_id):
+        return app.db.users.find_one({"_id": user_id})
+
+    @staticmethod
+    def update_password(user_id, new_password):
+        app.db.users.update_one({"_id": user_id}, {"$set": {"password": pbkdf2_sha256.hash(new_password)}})
 
     @staticmethod
     def find_by_email(email):
@@ -30,6 +38,27 @@ class User:
             "password": self.password,
             "wallet": self.wallet,
         }
+
+
+class TokenBlocklist:
+    @staticmethod
+    def add_to_blocklist(jti, expires):
+        app.redis_client.set(jti, "", ex=expires)
+
+    @staticmethod
+    def is_token_revoked(jti):
+        return app.redis_client.get(jti) is not None
+
+class EmailService:
+    @staticmethod
+    def send_password_reset(email, subject, sender, recipients, text_body, html_body):
+        otp_handler.send_email(
+            subject=subject,
+            sender=sender,
+            recipients=recipients,
+            text_body=text_body,
+            html_body=html_body
+        )
 
 
 class ClientApp:
@@ -73,3 +102,5 @@ class ClientUser:
 def get_user_details(user_id):
     user_details = app.db.users.find_one({"_id": user_id})
     return user_details
+
+
