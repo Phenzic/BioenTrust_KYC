@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
-from .controllers import AuthController 
+from .controllers import AuthController
 from . import auth
+
 
 @auth.route("/", methods=["GET"])
 def home():
@@ -23,6 +24,7 @@ def home():
 def signup():
     return AuthController.signup(request)
 
+
 @auth.route("/verify-email", methods=["POST"])
 def verify_email():
     return AuthController.verify_email(request)
@@ -31,4 +33,3 @@ def verify_email():
 @auth.route("/signin", methods=["POST"])
 def signin():
     return AuthController.signin(request)
-

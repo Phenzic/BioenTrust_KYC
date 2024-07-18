@@ -4,6 +4,7 @@ import redis
 
 mail = Mail()
 
+
 def init_utils(app):
     mail.init_app(app)
 
@@ -15,4 +16,3 @@ try:
     print("Connected to Redis Succesfully")
 except redis.ConnectionError as e:
     print((f"Could not connect to Redis {e}"))
-

@@ -6,11 +6,12 @@ from flask_jwt_extended import create_access_token, create_refresh_token
 from ..utils.redis_handler import redis_handler
 from ..utils.otp_handler import otp_handler
 
+
 class AuthController:
     @staticmethod
     def home():
-        return("Welcome to BioEntrust Auth server")
-    
+        return "Welcome to BioEntrust Auth server"
+
     @staticmethod
     def signup(request):
         user = {
@@ -18,8 +19,10 @@ class AuthController:
             "first_name": request.json["first_name"],
             "last_name": request.json["last_name"],
             "email": request.json["email"],
-            "password": pbkdf2_sha256.hash(request.json["password"]),  # Hash the password here
-            "wallet": 0
+            "password": pbkdf2_sha256.hash(
+                request.json["password"]
+            ),  # Hash the password here
+            "wallet": 0,
         }
 
         if User.find_by_email(user["email"]):
@@ -35,12 +38,7 @@ class AuthController:
         redis_handler.save_otp(otp_request_id, email_otp, new_user.to_dict())
         otp_handler.send_otp(email_otp, user["email"])
 
-        return jsonify({
-            "otp_request_id": otp_request_id,
-            "response": "otp sent"
-        })
-
-
+        return jsonify({"otp_request_id": otp_request_id, "response": "otp sent"})
 
     @staticmethod
     def verify_email(request):
@@ -65,18 +63,17 @@ class AuthController:
             access_token = create_access_token(identity=new_user._id)
             refresh_token = create_refresh_token(identity=new_user._id)
 
-            return jsonify(
-                {
-                    "message": "Logged In",
-                    "token": {
-                        "access": access_token,
-                        "refresh": refresh_token
+            return (
+                jsonify(
+                    {
+                        "message": "Logged In",
+                        "token": {"access": access_token, "refresh": refresh_token},
                     }
-                }
-            ), 200
+                ),
+                200,
+            )
         else:
             return jsonify({"error": "Signup Failed"}), 401
-
 
     @staticmethod
     def signin(request):
@@ -87,16 +84,16 @@ class AuthController:
         if user and pbkdf2_sha256.verify(password, user["password"]):
             access_token = create_access_token(identity=user["_id"])
             refresh_token = create_refresh_token(identity=user["_id"])
-            return jsonify(
-                {
-                    "message": "Logged In",
-                    "token": {
-                        "access": access_token,
-                        "refresh": refresh_token
-                        }
-                }
-            ), 200
-            
+            return (
+                jsonify(
+                    {
+                        "message": "Logged In",
+                        "token": {"access": access_token, "refresh": refresh_token},
+                    }
+                ),
+                200,
+            )
+
         return jsonify({"error": "Invalid login credentials"}), 401
 
 

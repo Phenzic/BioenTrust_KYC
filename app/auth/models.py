@@ -2,9 +2,10 @@ import uuid
 from passlib.hash import pbkdf2_sha256
 from flask import current_app as app
 
+
 class User:
     def __init__(self, _id, first_name, last_name, email, password, wallet=0):
-        self._id =  _id
+        self._id = _id
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
@@ -28,9 +29,9 @@ class User:
             "last_name": self.last_name,
             "email": self.email,
             "password": self.password,
-            "wallet": self.wallet
+            "wallet": self.wallet,
         }
-    
+
 
 class ClientApp:
     def __init__(self, user_id):
@@ -42,10 +43,8 @@ class ClientApp:
         return db["client_data"].insert_one(self.to_dict())
 
     def to_dict(self):
-        return {
-            "_id": self._id,
-            "apps": self.apps
-        }
+        return {"_id": self._id, "apps": self.apps}
+
 
 class ServiceCharge:
     def __init__(self, user_id, email):
@@ -59,8 +58,4 @@ class ServiceCharge:
         return db["service_charges"].insert_one(self.to_dict())
 
     def to_dict(self):
-        return {
-            "_id": self._id,
-            "email": self.email,
-            "charges": self.charges
-        }
+        return {"_id": self._id, "email": self.email, "charges": self.charges}

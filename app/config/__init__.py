@@ -9,7 +9,7 @@ class Config:
     CORS_ORIGINS = "*"
     MONGO_URI = os.getenv("MONGO_URI")
     REDIS_HOST = os.getenv("REDIS_CLIENT")
-    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_SERVER = "smtp.gmail.com"
     MAIL_PORT = 587
     MAIL_USE_TLS = True
     MAIL_USE_SSL = False
