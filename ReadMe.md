@@ -75,7 +75,7 @@ Configuration settings can be adjusted in the `/config` dir. Make sure to set th
    ```bash
    autopep8 --in-place --aggressive --aggressive --recursive .
    ```
-   or use `blacm .`
+   or use `black .`
 
 3. Add your changes:
 

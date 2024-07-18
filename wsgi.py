@@ -1,6 +1,6 @@
 from app import create_app
 from flask import jsonify
-from .app.auth.controllers import AuthController
+from app.auth.controllers import AuthController
 
 
 

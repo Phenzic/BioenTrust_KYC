@@ -31,3 +31,8 @@ def verify_email():
 @auth.route("/signin", methods=["POST"])
 def signin():
     return AuthController.signin(request)
+
+
+@auth.route("/verify-sms", methods=["POST"])
+def validate_sms_otp():
+    return AuthController.validate_sms_otp(request)
