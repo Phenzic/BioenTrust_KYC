@@ -3,7 +3,7 @@ from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 from .config.database import get_db
 from .config import Config
-from app.utils import init_utils
+from .utils import init_utils
 
 
 def create_app():
