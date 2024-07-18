@@ -12,6 +12,7 @@ class AuthController:
     def home():
         return "Welcome to BioEntrust Auth server"
 
+
     @staticmethod
     def signup(request):
         user = {
@@ -83,7 +84,3 @@ class AuthController:
                 "access": access_token, "refresh": refresh_token}, }), 200, )
 
         return jsonify({"error": "Invalid login credentials"}), 401
-
-
-# $pbkdf2-sha256$29000$tBbiPEeIsda6d86513oPwQ$PIXLnC8vYf9XDfFcqtW8.QOr8FP9kUrwdV5PBex4G4c
-# $pbkdf2-sha256$29000$L2XMOUdojbG2dm5NCaFUSg$vJ34CCK/jaXYvzOaqBAFMchsefblj0k4bkp2FxKyMic
