@@ -11,7 +11,6 @@ class User:
         self.email = email
         self.password = password
         self.wallet = wallet
-        print(self.password, "....................$$$$$$$$$$$$$$$$$$")
 
     @staticmethod
     def find_by_email(email):
