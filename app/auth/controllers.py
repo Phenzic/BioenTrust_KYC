@@ -18,14 +18,14 @@ class AuthController:
             "first_name": request.json["first_name"],
             "last_name": request.json["last_name"],
             "email": request.json["email"],
-            "password": request.json["password"],
+            "password": pbkdf2_sha256.hash(request.json["password"]),  # Hash the password here
             "wallet": 0
         }
 
         if User.find_by_email(user["email"]):
             return jsonify({"error": "Email address already in use"}), 409
-        
-        password = str(user['password'])        
+
+        password = request.json["password"]
         if len(password) < 8:
             return jsonify({"error": "Password should be more than 7 characters"}), 400
 
@@ -39,6 +39,8 @@ class AuthController:
             "otp_request_id": otp_request_id,
             "response": "otp sent"
         })
+
+
 
     @staticmethod
     def verify_email(request):
@@ -83,7 +85,6 @@ class AuthController:
         user = User.find_by_email(email)
         print(pbkdf2_sha256.verify(password, user["password"]))
         if user and pbkdf2_sha256.verify(password, user["password"]):
-            print("yes")
             access_token = create_access_token(identity=user["_id"])
             refresh_token = create_refresh_token(identity=user["_id"])
             return jsonify(
@@ -97,3 +98,7 @@ class AuthController:
             ), 200
             
         return jsonify({"error": "Invalid login credentials"}), 401
+
+
+# $pbkdf2-sha256$29000$tBbiPEeIsda6d86513oPwQ$PIXLnC8vYf9XDfFcqtW8.QOr8FP9kUrwdV5PBex4G4c
+# $pbkdf2-sha256$29000$L2XMOUdojbG2dm5NCaFUSg$vJ34CCK/jaXYvzOaqBAFMchsefblj0k4bkp2FxKyMic

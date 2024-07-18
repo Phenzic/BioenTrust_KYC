@@ -8,8 +8,9 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
-        self.password = pbkdf2_sha256.hash(password)
+        self.password = password
         self.wallet = wallet
+        print(self.password, "....................$$$$$$$$$$$$$$$$$$")
 
     @staticmethod
     def find_by_email(email):
@@ -51,6 +52,7 @@ class ServiceCharge:
         self._id = user_id
         self.email = email
         self.service = {}
+        self.charges = 0
 
     def save_to_db(self):
         db = app.db.users
@@ -59,5 +61,6 @@ class ServiceCharge:
     def to_dict(self):
         return {
             "_id": self._id,
-            "email": self.email
+            "email": self.email,
+            "charges": self.charges
         }
