@@ -19,7 +19,6 @@ class Config:
     MAIL_DEFAULT_SENDER = os.getenv("MAIL_USERNAME")
     ACCESS_EXPIRES = timedelta(hours=1)
 
-
     # app.config['CACHE_TYPE'] = 'redis'
     # app.config['CACHE_REDIS_HOST'] = 'localhost'
     # app.config['CACHE_REDIS_PORT'] = 6379

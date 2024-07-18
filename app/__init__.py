@@ -6,7 +6,6 @@ from .config import Config
 from app.utils import init_utils
 
 
-
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -23,6 +22,3 @@ def create_app():
         app.db = get_db()
 
     return app
-
-
-

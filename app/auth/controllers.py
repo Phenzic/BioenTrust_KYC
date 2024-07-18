@@ -9,6 +9,7 @@ from ..utils.otp_handler import otp_handler
 from .models import ClientUser
 from ..config import Config
 
+
 class AuthController:
     @staticmethod
     def home():
@@ -99,8 +100,9 @@ class AuthController:
         if int(sms_otp) == int(user_otp):
             new_request["status"] = "Success"
             new_request["status_description"] = "Phone Number Verified"
-            new_request["requestTime"] = datetime.strptime(new_request["requestTime"], "%Y-%m-%dT%H:%M:%S.%fZ")
-            
+            new_request["requestTime"] = datetime.strptime(
+                new_request["requestTime"], "%Y-%m-%dT%H:%M:%S.%fZ")
+
             ClientUser.insert_new_request(new_request)
 
             redis_handler.delete_otp(otp_request_id)
@@ -108,14 +110,15 @@ class AuthController:
 
             user_details = ClientUser.get_user_details(new_request["user_id"])
 
-            return jsonify({"success": "you've been verified!", "user_detail": user_details, "geolocation": new_request["geolocation"]}), 200
+            return jsonify({"success": "you've been verified!", "user_detail": user_details,
+                           "geolocation": new_request["geolocation"]}), 200
         else:
             new_request["status"] = "Error"
             new_request["status_description"] = "Could not verify phone number"
-            new_request["requestTime"] = datetime.strptime(new_request["requestTime"], "%Y-%m-%dT%H:%M:%S.%fZ")
+            new_request["requestTime"] = datetime.strptime(
+                new_request["requestTime"], "%Y-%m-%dT%H:%M:%S.%fZ")
             ClientUser.insert_new_request(new_request)
             return jsonify({"error": "Invalid OTP key"}), 400
-
 
     @staticmethod
     def check_if_token_is_revoked(jwt_header, jwt_payload: dict):
@@ -129,7 +132,8 @@ class AuthController:
         jti = token["jti"]
         ttype = token["type"]
         TokenBlocklist.add_to_blocklist(jti, Config['ACCESS_EXPIRES'])
-        return jsonify(msg=f"{ttype.capitalize()} token successfully revoked"), 200
+        return jsonify(
+            msg=f"{ttype.capitalize()} token successfully revoked"), 200
 
     @staticmethod
     @jwt_required(refresh=True)
@@ -137,8 +141,6 @@ class AuthController:
         identity = get_jwt_identity()
         new_access_token = create_access_token(identity=identity)
         return jsonify({"access": new_access_token})
-
-
 
     @staticmethod
     def forgot_password():
@@ -151,20 +153,25 @@ class AuthController:
 
         client_id = client["_id"]
         expires = datetime.timedelta(hours=1)
-        new_access_token = create_access_token(identity=client_id, expires_delta=expires)
+        new_access_token = create_access_token(
+            identity=client_id, expires_delta=expires)
 
         EmailService.send_password_reset(
             email,
             "Reset Your Password",
             "mlsayabatech@gmail.com",
             [email],
-            render_template("email/reset_password.txt", url=url + new_access_token, name=client["first_name"]),
-            render_template("email/reset_password.html", url=url + new_access_token, name=client["first_name"])
-        )
+            render_template(
+                "email/reset_password.txt",
+                url=url + new_access_token,
+                name=client["first_name"]),
+            render_template(
+                "email/reset_password.html",
+                url=url + new_access_token,
+                name=client["first_name"]))
 
-        return jsonify({"message": "Password reset link sent to your email"}), 200
-
-
+        return jsonify(
+            {"message": "Password reset link sent to your email"}), 200
 
     @staticmethod
     def reset_password(token):

@@ -3,6 +3,7 @@ from flask import jsonify
 
 app = create_app()
 
+
 @app.route("/", methods=["GET"])
 def home():
     try:
@@ -16,6 +17,7 @@ def home():
     except Exception as e:
         error_message = {"status": "error", "message": str(e)}
         return jsonify(error_message), 500
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", threaded=True)
