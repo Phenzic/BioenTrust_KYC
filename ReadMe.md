@@ -6,19 +6,11 @@
 2. [Configuration](#configuration)
 3. [Contribution](#contribution)
 4. [Endpoints](#endpoints)
-   <!-- - [GET /](#get-)
-   - [Encryption Requests](#encryption-requests)
-   - [Calendar Requests](#calendar-requests)
-   - [User Request](#user-requests)
-   - [Article API Documentation](#article-api-documentation)
-   - [Comment API Documentation](#comment-api-documentation)
-   - [Community Endpoints](#community-api-documentation)
-   - [Data Endpoints](#data-api-documentation)
-   - [User Profile API Documentation](#user-profile-api-documentation) -->
-<!-- - [Event Payload](#event-payload) -->
+   - [GET](#get)
+
 - [License](#license)
 
-<!-- **_Note: development server url: https://chatbackend-1t5y.onrender.com/_** -->
+**_Note: development server url: https://chatbackend-1t5y.onrender.com/_**
 
 ## Installation
 
@@ -97,7 +89,7 @@ Configuration settings can be adjusted in the `/config` dir. Make sure to set th
 
 ## Endpoints
 
-### GET /
+### GET
 
 **Description**: Welcome message and documentation link.
 

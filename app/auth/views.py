@@ -41,8 +41,6 @@ def protected():
     return jsonify(error_message), 500
 
 
-
-
 @auth.route("/signup", methods=["POST"])
 def signup():
     return AuthController.signup(request)
@@ -78,11 +76,11 @@ def refresh_access():
     return AuthController.refresh_access()
 
 
-@auth.route('/forgot-password', methods=["POST"])
+@auth.route("/forgot-password", methods=["POST"])
 def forgot_password():
     return AuthController.forgot_password()
 
 
-@auth.route('/reset-password/', methods=["POST"])
+@auth.route("/reset-password/", methods=["POST"])
 def reset_password():
     return AuthController.reset_password()

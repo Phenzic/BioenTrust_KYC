@@ -12,6 +12,7 @@ def is_refresh_token_revoked(fn):
         if redis_client.get(jti) is not None:
             return jsonify({"msg": "Token has been revoked"}), 401
         return fn(*args, **kwargs)
+
     return wrapper
 
 
@@ -23,4 +24,5 @@ def is_access_token_revoked(fn):
         if redis_client.get(jti) is not None:
             return jsonify({"msg": "Token has been revoked"}), 401
         return fn(*args, **kwargs)
+
     return wrapper

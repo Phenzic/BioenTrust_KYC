@@ -23,7 +23,8 @@ class User:
     def update_password(user_id, new_password):
         db = app.db.users
         db["user"].update_one(
-            {"_id": user_id}, {"$set": {"password": pbkdf2_sha256.hash(new_password)}})
+            {"_id": user_id}, {"$set": {"password": pbkdf2_sha256.hash(new_password)}}
+        )
 
     @staticmethod
     def find_by_email(email):
@@ -57,19 +58,13 @@ class TokenBlocklist:
 
 class EmailService:
     @staticmethod
-    def send_password_reset(
-            email,
-            subject,
-            sender,
-            recipients,
-            text_body,
-            html_body):
+    def send_password_reset(email, subject, sender, recipients, text_body, html_body):
         otp_handler.send_email(
             subject=subject,
             sender=sender,
             recipients=recipients,
             text_body=text_body,
-            html_body=html_body
+            html_body=html_body,
         )
 
 
