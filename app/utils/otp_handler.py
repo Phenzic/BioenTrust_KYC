@@ -38,6 +38,7 @@ def send_sms(otp, client_phone_number):
 
     response = requests.post(url="https://my.kudisms.net/api/otp", json=param)
     if response.status_code != 200:
-        return jsonify({"error": "Something went wrong!"}), response.status_code
+        return jsonify({"error": "Something went wrong!"}
+                       ), response.status_code
 
     return jsonify({"success": response.text}), response.status_code

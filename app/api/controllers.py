@@ -4,6 +4,7 @@ from models import APIModel
 from ..utils.api_handler import HMACHelper
 from ..kyc.models import ClientUserModel
 
+
 class APIController:
     @staticmethod
     def get_all_liveapi(client_id):
@@ -21,7 +22,8 @@ class APIController:
             secret_key = logs['api_data'][0]['secret_key']
             if helper.verify_key(api_key, secret_key):
                 return jsonify(logs), 200
-            return jsonify({"message": f"Invalid API key, Use a {key_env_var.replace('API_', '').lower()} API key"}), 403
+            return jsonify(
+                {"message": f"Invalid API key, Use a {key_env_var.replace('API_', '').lower()} API key"}), 403
         return jsonify({"message": "No logs found for this API key"}), 404
 
     @staticmethod
@@ -34,10 +36,23 @@ class APIController:
         user = ClientUserModel.find_by_user_id({'_id': user_id})
         if user:
             if key_type in user:
-                APIModel.update_sandbox_keys(user_id, api_key, secret_key) if key_type == 'sandbox_keys' else APIModel.update_live_keys(user_id, api_key, secret_key)
+                APIModel.update_sandbox_keys(
+                    user_id,
+                    api_key,
+                    secret_key) if key_type == 'sandbox_keys' else APIModel.update_live_keys(
+                    user_id,
+                    api_key,
+                    secret_key)
             else:
-                APIModel.insert_sandbox_keys(user_id, api_key, secret_key) if key_type == 'sandbox_keys' else APIModel.insert_live_keys(user_id, api_key, secret_key)
-            return jsonify({'status': 'API key and secret key created and stored successfully', "api_key": api_key, "secret_key": secret_key}), 201
+                APIModel.insert_sandbox_keys(
+                    user_id,
+                    api_key,
+                    secret_key) if key_type == 'sandbox_keys' else APIModel.insert_live_keys(
+                    user_id,
+                    api_key,
+                    secret_key)
+            return jsonify({'status': 'API key and secret key created and stored successfully',
+                           "api_key": api_key, "secret_key": secret_key}), 201
         return jsonify({'status': 'User not found'}), 404
 
     @staticmethod
@@ -51,7 +66,13 @@ class APIController:
                     key_found = True
                     break
             if key_found:
-                result = APIModel.delete_sandbox_key(user_id, api_key, secret_key) if key_type == 'sandbox_keys' else APIModel.delete_live_key(user_id, api_key, secret_key)
+                result = APIModel.delete_sandbox_key(
+                    user_id,
+                    api_key,
+                    secret_key) if key_type == 'sandbox_keys' else APIModel.delete_live_key(
+                    user_id,
+                    api_key,
+                    secret_key)
                 response['message'] = 'API key and secret key deleted successfully' if result.modified_count > 0 else 'No keys were deleted'
                 response['status'] = 200 if result.modified_count > 0 else 500
             else:

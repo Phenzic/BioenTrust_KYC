@@ -4,6 +4,7 @@ import cv2
 import face_recognition
 from io import BytesIO
 
+
 class Images:
 
     @staticmethod
@@ -30,7 +31,8 @@ class Images:
             new_width = width * upscale_factor
 
             # Upscale the image
-            upscaled_image = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_CUBIC)
+            upscaled_image = cv2.resize(
+                image, (new_width, new_height), interpolation=cv2.INTER_CUBIC)
         else:
             upscaled_image = face_recognition.load_image_file(BytesIO(byte))
 

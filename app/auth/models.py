@@ -58,7 +58,13 @@ class TokenBlocklist:
 
 class EmailService:
     @staticmethod
-    def send_password_reset(email, subject, sender, recipients, text_body, html_body):
+    def send_password_reset(
+            email,
+            subject,
+            sender,
+            recipients,
+            text_body,
+            html_body):
         otp_handler.send_email(
             subject=subject,
             sender=sender,

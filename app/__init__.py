@@ -7,12 +7,12 @@ from .utils import init_utils
 from .auth.views import auth as auth_blueprint
 from .api.views import sandbox, live
 
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
     CORS(app, supports_credentials=True, origins=app.config["CORS_ORIGINS"])
-
 
     app.register_blueprint(auth_blueprint, url_prefix="/user")
     app.register_blueprint(sandbox, url_prefix='/sandbox_api')

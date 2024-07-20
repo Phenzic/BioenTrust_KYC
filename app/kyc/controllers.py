@@ -2,14 +2,14 @@ import uuid
 import requests
 from flask import jsonify
 from models import UserModel, ClientAppModel, ServiceChargeModel, ClientUserModel
-from ..utils import redis_client 
- # generate_otp # log_wallet_transaction, convert_and_upscale_image, send_sms_otp
+from ..utils import redis_client
+# generate_otp # log_wallet_transaction, convert_and_upscale_image,
+# send_sms_otp
 from ..utils.wallet_handler import Wallet
 from ..utils.image_handler import Images
 from ..utils.otp_handler import send_sms
 from ..config import Config
 import face_recognition
-
 
 
 class KYCController:
@@ -120,9 +120,8 @@ class KYCController:
             return jsonify({"error": "User not found"}), 404
 
         old_wallet_balance = user["wallet"]
-        charge_amount = ServiceChargeModel.find_by_user_id(user_id)["service"].get(
-            "kyc", 0
-        )
+        charge_amount = ServiceChargeModel.find_by_user_id(
+            user_id)["service"].get("kyc", 0)
 
         if old_wallet_balance < charge_amount:
             Wallet.transaction_log(
@@ -141,7 +140,8 @@ class KYCController:
 
         ClientUserModel.update_live_image(data.get("user_id"), data["image2"])
 
-        face_recognition_face_encoding1 = Images.convert_and_upscale_image(data["image1"])
+        face_recognition_face_encoding1 = Images.convert_and_upscale_image(
+            data["image1"])
         face_recognition_face_encoding2 = Images.convert_and_upscale_image(
             requests.get(data["image2"]).content
         )
@@ -154,8 +154,12 @@ class KYCController:
                 face_recognition_face_encoding2
             )[0]
             distance = round(
-                100 - face_recognition.face_distance([encoding1], encoding2)[0] * 100, 2
-            )
+                100 -
+                face_recognition.face_distance(
+                    [encoding1],
+                    encoding2)[0] *
+                100,
+                2)
         except Exception as e:
             return jsonify({"error": "Invalid Image"}), 400
 

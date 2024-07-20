@@ -10,7 +10,7 @@
 
 - [License](#license)
 
-**_Note: development server url: https://chatbackend-1t5y.onrender.com/_**
+**_Note: development server url: https://auth-teg6.onrender.com**
 
 ## Installation
 
@@ -65,7 +65,7 @@ Configuration settings can be adjusted in the `/config` dir. Make sure to set th
 2. Format the code:
 
    ```bash
-   autopep8 --in-place --aggressive --aggressive --recursive .
+   autopep8 --in-place --aggressive --aggressive --recursive . --exclude venv
    ```
    or use `black .`
 
