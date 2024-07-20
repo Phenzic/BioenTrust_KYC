@@ -2,6 +2,7 @@ import uuid
 from passlib.hash import pbkdf2_sha256
 from flask import current_app as app
 from ..utils.otp_handler import otp_handler
+from ..utils import redis_client
 
 
 class User:
@@ -15,11 +16,13 @@ class User:
 
     @staticmethod
     def find_by_id(user_id):
-        return app.db.users.find_one({"_id": user_id})
+        db = app.db.users
+        return db["user"].find_one({"_id": user_id})
 
     @staticmethod
     def update_password(user_id, new_password):
-        app.db.users.update_one(
+        db = app.db.users
+        db["user"].update_one(
             {"_id": user_id}, {"$set": {"password": pbkdf2_sha256.hash(new_password)}})
 
     @staticmethod
@@ -45,11 +48,11 @@ class User:
 class TokenBlocklist:
     @staticmethod
     def add_to_blocklist(jti, expires):
-        app.redis_client.set(jti, "", ex=expires)
+        redis_client.set(jti, "", ex=expires)
 
     @staticmethod
     def is_token_revoked(jti):
-        return app.redis_client.get(jti) is not None
+        return redis_client.get(jti) is not None
 
 
 class EmailService:

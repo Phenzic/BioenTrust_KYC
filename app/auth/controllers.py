@@ -3,11 +3,12 @@ from .models import User, ClientApp, ServiceCharge, TokenBlocklist, EmailService
 from flask import jsonify, render_template, request
 import uuid
 from passlib.hash import pbkdf2_sha256
-from flask_jwt_extended import create_access_token, create_refresh_token, decode_token, get_jwt_identity, get_jwt, jwt_required
+from flask_jwt_extended import create_access_token, create_refresh_token, decode_token, get_jwt_identity, jwt_required, get_jwt
 from ..utils.redis_handler import redis_handler
 from ..utils.otp_handler import otp_handler
 from .models import ClientUser
 from ..config import Config
+from app.utils.token_handler import is_refresh_token_revoked, is_access_token_revoked
 
 
 class AuthController:
@@ -88,7 +89,7 @@ class AuthController:
         return jsonify({"error": "Invalid login credentials"}), 401
 
     @staticmethod
-    def validate_sms_otp(request):
+    def verify_sms(request):
         app_id = request.json["app_id"]
         document = ClientApp.find_by_app_id(app_id)
         user_otp = request.json["otp"]
@@ -127,16 +128,18 @@ class AuthController:
 
     @staticmethod
     @jwt_required(refresh=True)
-    def logout():
+    @is_refresh_token_revoked
+    def signout():
         token = get_jwt()
         jti = token["jti"]
         ttype = token["type"]
-        TokenBlocklist.add_to_blocklist(jti, Config['ACCESS_EXPIRES'])
+        TokenBlocklist.add_to_blocklist(jti, Config.ACCESS_EXPIRES)
         return jsonify(
             msg=f"{ttype.capitalize()} token successfully revoked"), 200
 
     @staticmethod
     @jwt_required(refresh=True)
+    @is_refresh_token_revoked
     def refresh_access():
         identity = get_jwt_identity()
         new_access_token = create_access_token(identity=identity)
@@ -172,16 +175,19 @@ class AuthController:
 
         return jsonify(
             {"message": "Password reset link sent to your email"}), 200
-
+    
     @staticmethod
-    def reset_password(token):
+    @jwt_required()
+    @is_access_token_revoked
+    def reset_password():
+        user_id = get_jwt_identity()
         try:
-            client_id = decode_token(token)['sub']
-            user = User.find_by_id(client_id)
+            # client_id = decode_token(token)['sub']
+            user = User.find_by_id(user_id)
 
             if user:
                 new_password = request.json["password"]
-                User.update_password(client_id, new_password)
+                User.update_password(user_id, new_password)
                 return jsonify({"message": "Password reset successful"}), 200
             else:
                 return jsonify({"error": "Invalid token"}), 401
