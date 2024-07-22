@@ -48,35 +48,6 @@ class APIController:
                 {"message": f"Invalid API key, Use a Live API key"}), 403
         return jsonify({"message": "No logs found for this API key"}), 404
 
-    # @staticmethod
-    # def create_key(user_id, key_env_var, key_type):
-    #     key = Config.SANDBOX_KEY
-    #     hmac_helper = HMACHelper(key)
-    #     api_key, api_signature = hmac_helper.generate_key()
-    #     secret_key = api_signature
-    #     # client_app.find_one
-    #     user = ClientUserModel.find_by_user_id({'_id': user_id})
-    #     if user:
-    #         if key_type in user:
-    #             APIModel.update_sandbox_keys(
-    #                 user_id,
-    #                 api_key,
-    #                 secret_key) if key_type == 'sandbox_keys' else APIModel.update_live_keys(
-    #                 user_id,
-    #                 api_key,
-    #                 secret_key)
-    #         else:
-    #             APIModel.insert_sandbox_keys(
-    #                 user_id,
-    #                 api_key,
-    #                 secret_key) if key_type == 'sandbox_keys' else APIModel.insert_live_keys(
-    #                 user_id,
-    #                 api_key,
-    #                 secret_key)
-    #         return jsonify({'status': 'API key and secret key created and stored successfully',
-    #                        "api_key": api_key, "secret_key": secret_key}), 201
-    #     return jsonify({'status': 'User not found'}), 404
-
     @staticmethod
     def create_sandbox_key(user_id):
         key = Config.SANDBOX_KEY
