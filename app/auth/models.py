@@ -56,6 +56,21 @@ class TokenBlocklist:
         return redis_client.get(jti) is not None
 
 
+class AppModel:
+    # def __init__(self, db):
+    #     self.collection = db.apps
+    @staticmethod
+    def find_by_user_id(user_id):
+        return app.db.client["client_app"].find_one({"_id": user_id})
+    
+    @staticmethod
+    def create_app(app_data, user_id):
+        result = app.db.client["client_app"].update_one(
+            {"_id": user_id},
+            {"$push": {"apps": app_data}}
+        )
+        return result
+
 class EmailService:
     @staticmethod
     def send_password_reset(
@@ -81,11 +96,17 @@ class ClientApp:
 
     @staticmethod
     def find_by_app_id(app_id):
-        return app.db.client_app.find_one({"apps.app_id": app_id})
+        return app.db.client["client_app"].find_one({"apps.app_id": app_id})
+
+
+    @staticmethod
+    def find_by_user_id(user_id):
+        return app.db.client["client_app"].find_one({"_id": user_id})
+
 
     def save_to_db(self):
         db = app.db.client
-        return db["client_data"].insert_one(self.to_dict())
+        return db["client_app"].insert_one(self.to_dict())
 
     def to_dict(self):
         return {"_id": self._id, "apps": self.apps}
@@ -95,16 +116,21 @@ class ServiceCharge:
     def __init__(self, user_id, email):
         self._id = user_id
         self.email = email
-        self.service = {}
-        self.charges = 0
+        self.service = {
+            "e-affidavit": 0,
+            "e-attendance": 0,
+            "e-census": 0,
+            "kyc": 0,
+
+        }
+        # self.charges = 0
 
     def save_to_db(self):
         db = app.db.users
         return db["service_charges"].insert_one(self.to_dict())
 
     def to_dict(self):
-        return {"_id": self._id, "email": self.email, "charges": self.charges}
-
+        return {"_id": self._id, "email": self.email, "services": self.service}
 
 class ClientUser:
     @staticmethod

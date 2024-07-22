@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import JWTManager, jwt_required
 from app.utils.token_handler import is_access_token_revoked, is_refresh_token_revoked
-from .controllers import AuthController
+from .controllers import AppController, AuthController
 
 jwt = JWTManager()
 
@@ -39,6 +39,10 @@ def protected():
     except Exception as e:
         error_message = {"status": "error", "message": str(e)}
     return jsonify(error_message), 500
+
+@auth.route('/create-app', methods=['POST'])
+def create_app():
+    return AppController.create_app()
 
 
 @auth.route("/signup", methods=["POST"])

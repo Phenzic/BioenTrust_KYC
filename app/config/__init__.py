@@ -19,6 +19,8 @@ class Config:
     MAIL_DEFAULT_SENDER = os.getenv("MAIL_USERNAME")
     ACCESS_EXPIRES = timedelta(minutes=60)
     SERVICES = os.getenv("SERVICES")
+    LIVE_KEY = os.getenv("LIVE_KEY")
+    SANDBOX_KEY = os.getenv("SANDBOX_KEY")
 
     # app.config['CACHE_TYPE'] = 'redis'
     # app.config['CACHE_REDIS_HOST'] = 'localhost'

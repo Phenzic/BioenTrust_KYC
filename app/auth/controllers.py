@@ -16,7 +16,7 @@ from ..utils.otp_handler import otp_handler
 from .models import ClientUser
 from ..config import Config
 from app.utils.token_handler import is_refresh_token_revoked, is_access_token_revoked
-
+from .models import AppModel
 
 class AuthController:
     @staticmethod
@@ -59,7 +59,6 @@ class AuthController:
         otp_request_id = request.json["otp_request_id"]
 
         email_otp = redis_handler.get_otp(otp_request_id)
-
         if int(email_otp) == int(user_otp):
             user_data = redis_handler.get_user(otp_request_id)
             new_user = User(**user_data)
@@ -86,7 +85,9 @@ class AuthController:
         email = request.json["email"]
         password = str(request.json["password"])
         user = User.find_by_email(email)
-        print(pbkdf2_sha256.verify(password, user["password"]))
+        if not user:
+            return jsonify({"error": "email not registered"}), 401
+
         if user and pbkdf2_sha256.verify(password, user["password"]):
             access_token = create_access_token(identity=user["_id"])
             refresh_token = create_refresh_token(identity=user["_id"])
@@ -214,3 +215,40 @@ class AuthController:
                 return jsonify({"error": "Invalid token"}), 401
         except Exception as e:
             return jsonify({"error": str(e)}), 400
+
+
+
+
+class AppController:
+
+    @staticmethod
+    @jwt_required()
+    @is_access_token_revoked
+    def create_app():
+        # required_fields = ["name", "color", "date_of_creation", "verification", "user_information", "on_verification", "redirect_url"]
+        # for field in required_fields:
+        #     if field not in request:
+        #         return jsonify({"error": f"Missing required field: {field}"}), 400
+
+        user_id = get_jwt_identity()
+        app_data = {
+            "app_id": uuid.uuid4().hex,
+            "name": request.json["name"],
+            "color": request.json["color"],
+            "date_of_creation": request.json["date_of_creation"],
+            "verification": request.json["verification"],
+            "user_information": request.json["user_information"],
+            "on_verification": request.json["on_verification"],
+            "redirect_url": request.json["redirect_url"]
+        }
+
+        user = AppModel.find_by_user_id(user_id)
+        if not user:
+            return jsonify({"error": "User not found"}), 404
+
+        result = AppModel.create_app(app_data, user_id)
+
+        if result.modified_count == 0:
+            return jsonify({"error": "Failed to add app to user"}), 500
+
+        return jsonify({"status": "App added successfully", "app_id": app_data["app_id"]}), 201
