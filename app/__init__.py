@@ -4,7 +4,8 @@ from flask_cors import CORS
 from .config.database import get_db
 from .config import Config
 from .utils import init_utils
-from .auth.views import auth, c_app
+from .auth.views import auth
+from .client_app.views import c_app
 from .api.views import sandbox, live
 from .services.views import api
 

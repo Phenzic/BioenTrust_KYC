@@ -16,7 +16,6 @@ from ..utils.otp_handler import otp_handler
 from .models import ClientUser
 from ..config import Config
 from app.utils.token_handler import is_refresh_token_revoked, is_access_token_revoked
-from .models import AppModel
 
 class AuthController:
     @staticmethod

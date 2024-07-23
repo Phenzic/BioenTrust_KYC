@@ -1,6 +1,6 @@
 
 from flask import Blueprint, request
-from controllers import ServiceController
+from .controllers import ServiceController
 
 api = Blueprint('api', __name__)
 
