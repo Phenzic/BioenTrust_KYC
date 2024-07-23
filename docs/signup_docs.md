@@ -1,5 +1,3 @@
-Sure! Here is the updated documentation to include the new requests:
-
 # User API Documentation
 
 ## Table of Content

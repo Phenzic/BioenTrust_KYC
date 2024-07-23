@@ -1,5 +1,6 @@
 import os
-from flask import jsonify
+from flask import jsonify, request
+from flask_jwt_extended import get_jwt_identity
 from ..auth.models import ClientApp
 from .models import APIModel
 from ..utils.api_handler import HMACHelper
@@ -56,7 +57,7 @@ class APIController:
         secret_key = api_signature
 
         user = ClientApp.find_by_user_id(user_id)
-        print(user)
+
         if not user:
             return jsonify({'status': 'User not found'}), 404
 
@@ -95,23 +96,30 @@ class APIController:
         }), 201
 
     @staticmethod
-    def delete_key(user_id, api_key, secret_key, key_type):
-        user = APIModel.find_api_vault_by_id(user_id)
+    def delete_sandbox_key(user_id, api_key, secret_key):
+        return APIController._delete_key(user_id, api_key, secret_key, 'sandbox_keys')
+
+    @staticmethod
+    def delete_live_key(user_id, api_key, secret_key):
+        return APIController._delete_key(user_id, api_key, secret_key, 'live_keys')
+
+    @staticmethod
+    def _delete_key(user_id, api_key, secret_key, key_type):
+
+        user = APIModel.find_by_user_id(user_id)
         response = {}
+        
         if user:
             key_found = False
-            for key_pair in user[key_type]:
+            for key_pair in user.get(key_type, []):
                 if key_pair['key'] == api_key and key_pair['secret'] == secret_key:
                     key_found = True
                     break
             if key_found:
-                result = APIModel.delete_sandbox_key(
-                    user_id,
-                    api_key,
-                    secret_key) if key_type == 'sandbox_keys' else APIModel.delete_live_key(
-                    user_id,
-                    api_key,
-                    secret_key)
+                result = (APIModel.delete_sandbox_key(user_id, api_key, secret_key) 
+                          if key_type == 'sandbox_keys' 
+                          else APIModel.delete_live_key(user_id, api_key, secret_key))
+                
                 response['message'] = 'API key and secret key deleted successfully' if result.modified_count > 0 else 'No keys were deleted'
                 response['status'] = 200 if result.modified_count > 0 else 500
             else:
@@ -120,4 +128,7 @@ class APIController:
         else:
             response['message'] = 'User not found'
             response['status'] = 400
+
         return jsonify(response)
+
+

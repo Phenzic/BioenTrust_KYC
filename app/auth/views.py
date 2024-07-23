@@ -6,7 +6,7 @@ from .controllers import AppController, AuthController
 jwt = JWTManager()
 
 auth = Blueprint("user", __name__)
-
+c_app = Blueprint("app", __name__)
 
 @auth.route("/home", methods=["GET"])
 def home():
@@ -40,7 +40,7 @@ def protected():
         error_message = {"status": "error", "message": str(e)}
     return jsonify(error_message), 500
 
-@auth.route('/create-app', methods=['POST'])
+@c_app.route('/create-app', methods=['POST'])
 def create_app():
     return AppController.create_app()
 

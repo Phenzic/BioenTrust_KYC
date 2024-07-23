@@ -104,18 +104,18 @@ Configuration settings can be adjusted in the `/config` dir. Make sure to set th
 
 ## User Requests
 
-For detailed information about the user APIs, refer to the [User Documentation](./docs/signup_docs.md).
+For detailed information about the User APIs, refer to the [User Documentation](./docs/signup_docs.md).
 
-<!-- ## Encryption Requests
+ ## API Requests
 
-For detailed information about the encryption APIs, refer to the [Encryption Documentation](./docs/encryption_endpoints.md).
+For detailed information about the API-Key APIs, refer to the [API Documentation](./docs/api_docs.md).
 
-## Calendar Requests
+## APP Requests
 
-For detailed information about the calender APIs, refer to the [Calender Documentation](./docs/calender_endpoints.md).
+For detailed information about the App APIs, refer to the [APP Documentation](./docs/app_docs.md).
 
 
-## Article API Documentation
+<!--  ## Article API Documentation
 
 For detailed information about the article APIs, refer to the [Article API Documentation](./docs/article_endpoints.md).
 

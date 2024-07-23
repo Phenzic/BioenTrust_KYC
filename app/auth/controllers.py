@@ -225,10 +225,6 @@ class AppController:
     @jwt_required()
     @is_access_token_revoked
     def create_app():
-        # required_fields = ["name", "color", "date_of_creation", "verification", "user_information", "on_verification", "redirect_url"]
-        # for field in required_fields:
-        #     if field not in request:
-        #         return jsonify({"error": f"Missing required field: {field}"}), 400
 
         user_id = get_jwt_identity()
         app_data = {
