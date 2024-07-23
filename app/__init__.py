@@ -6,6 +6,7 @@ from .config import Config
 from .utils import init_utils
 from .auth.views import auth, c_app
 from .api.views import sandbox, live
+from .services.views import api
 
 
 
@@ -19,6 +20,7 @@ def create_app():
     app.register_blueprint(sandbox, url_prefix='/api/sandbox')
     app.register_blueprint(live, url_prefix='/api/live')
     app.register_blueprint(c_app, url_prefix='/app')
+    app.register_blueprint(api, url_prefix='/api')
 
     init_utils(app)
     jwt = JWTManager(app)
