@@ -21,6 +21,8 @@ class Config:
     SERVICES = os.getenv("SERVICES")
     LIVE_KEY = os.getenv("LIVE_KEY")
     SANDBOX_KEY = os.getenv("SANDBOX_KEY")
+    YOUVERIFY_BASE = "https://api.youverify.co"
+    YOUVERIFY_TOKEN = os.getenv("YOUVERIFY_TOKEN")
 
     # app.config['CACHE_TYPE'] = 'redis'
     # app.config['CACHE_REDIS_HOST'] = 'localhost'

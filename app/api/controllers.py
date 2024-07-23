@@ -7,6 +7,11 @@ from ..utils.api_handler import HMACHelper
 from ..config import Config
 
 class APIController:
+    
+    @staticmethod
+    def home():
+        return "Welcome to BioEntrust Auth server"
+
     @staticmethod
     def get_all_liveapi(client_id):
         document = APIModel.find_api_vault_by_id(client_id)

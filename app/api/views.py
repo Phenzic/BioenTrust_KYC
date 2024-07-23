@@ -5,6 +5,21 @@ from .controllers import APIController
 sandbox = Blueprint('sandbox', __name__)
 live = Blueprint('live', __name__)
 
+@sandbox.route("/", methods=["GET"])
+@live.route("/", methods=["GET"])
+def home():
+    try:
+        new_data = APIController.home
+        response_message = {
+            "new_data": str(new_data),
+        }
+        print(new_data)
+        return jsonify(response_message), 200
+
+    except Exception as e:
+        error_message = {"status": "error", "message": str(e)}
+    return jsonify(error_message), 500
+
 
 @live.route('/get_all_api/<client_id>')
 @jwt_required()

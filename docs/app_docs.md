@@ -7,7 +7,7 @@
 ## Base URL
 
 ```
-<base-url>/api
+<base-url>/app
 ```
 
 ## Endpoints
