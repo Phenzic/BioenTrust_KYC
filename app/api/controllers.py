@@ -6,8 +6,9 @@ from .models import APIModel
 from ..utils.api_handler import HMACHelper
 from ..config import Config
 
+
 class APIController:
-    
+
     @staticmethod
     def home():
         return "Welcome to BioEntrust Auth server"
@@ -26,7 +27,6 @@ class APIController:
             return jsonify({"message": "User has no generated API key"}), 400
         return jsonify(document)
 
-
     @staticmethod
     def get_sandbox_api_logs(api_key):
         key = Config.SANDBOX_KEY
@@ -39,7 +39,6 @@ class APIController:
             return jsonify(
                 {"message": f"Invalid API key, Use a Sandbox API key"}), 403
         return jsonify({"message": "No logs found for this API key"}), 404
-
 
     @staticmethod
     def get_live_api_logs(api_key):
@@ -77,7 +76,6 @@ class APIController:
             'secret_key': secret_key
         }), 201
 
-
     @staticmethod
     def create_live_key(user_id):
         key = Config.LIVE_KEY
@@ -102,18 +100,20 @@ class APIController:
 
     @staticmethod
     def delete_sandbox_key(user_id, api_key, secret_key):
-        return APIController._delete_key(user_id, api_key, secret_key, 'sandbox_keys')
+        return APIController._delete_key(
+            user_id, api_key, secret_key, 'sandbox_keys')
 
     @staticmethod
     def delete_live_key(user_id, api_key, secret_key):
-        return APIController._delete_key(user_id, api_key, secret_key, 'live_keys')
+        return APIController._delete_key(
+            user_id, api_key, secret_key, 'live_keys')
 
     @staticmethod
     def _delete_key(user_id, api_key, secret_key, key_type):
 
         user = APIModel.find_by_user_id(user_id)
         response = {}
-        
+
         if user:
             key_found = False
             for key_pair in user.get(key_type, []):
@@ -121,10 +121,15 @@ class APIController:
                     key_found = True
                     break
             if key_found:
-                result = (APIModel.delete_sandbox_key(user_id, api_key, secret_key) 
-                          if key_type == 'sandbox_keys' 
-                          else APIModel.delete_live_key(user_id, api_key, secret_key))
-                
+                result = (
+                    APIModel.delete_sandbox_key(
+                        user_id,
+                        api_key,
+                        secret_key) if key_type == 'sandbox_keys' else APIModel.delete_live_key(
+                        user_id,
+                        api_key,
+                        secret_key))
+
                 response['message'] = 'API key and secret key deleted successfully' if result.modified_count > 0 else 'No keys were deleted'
                 response['status'] = 200 if result.modified_count > 0 else 500
             else:
@@ -135,5 +140,3 @@ class APIController:
             response['status'] = 400
 
         return jsonify(response)
-
-

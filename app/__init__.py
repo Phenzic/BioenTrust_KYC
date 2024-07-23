@@ -10,7 +10,6 @@ from .api.views import sandbox, live
 from .services.views import api
 
 
-
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)

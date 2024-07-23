@@ -6,7 +6,8 @@ from .models import ServiceModel
 from ..config import Config
 
 youverify = Config.YOUVERIFY_BASE
-token= Config.YOUVERIFY_TOKEN
+token = Config.YOUVERIFY_TOKEN
+
 
 class ServiceController:
 
@@ -16,7 +17,8 @@ class ServiceController:
         if user_detail:
             return jsonify({"user_detail": user_detail}), 200
         else:
-            return jsonify({"error": "Something went wrong! Confirm if user exists!"}), 404
+            return jsonify(
+                {"error": "Something went wrong! Confirm if user exists!"}), 404
 
     @staticmethod
     def bvn_verification():
@@ -47,7 +49,11 @@ class ServiceController:
                 data["validations"] = {
                     "selfie": {"image": request.json["image"]}
                 }
-            if all(field in request.json for field in ["firstName", "lastName", "dateOfBirth"]):
+            if all(
+                field in request.json for field in [
+                    "firstName",
+                    "lastName",
+                    "dateOfBirth"]):
                 data.setdefault("validations", {})["data"] = {
                     "firstName": request.json["firstName"],
                     "lastName": request.json["lastName"],
@@ -87,9 +93,6 @@ class ServiceController:
         except Exception as e:
             return jsonify({"error": str(e)}), 500
 
-
-
-
     @staticmethod
     def vnin_verification():
         try:
@@ -120,7 +123,11 @@ class ServiceController:
                 data["validations"] = {
                     "selfie": {"image": request.json["image"]}
                 }
-            if all(field in request.json for field in ["firstName", "lastName", "dateOfBirth"]):
+            if all(
+                field in request.json for field in [
+                    "firstName",
+                    "lastName",
+                    "dateOfBirth"]):
                 data.setdefault("validations", {})["data"] = {
                     "firstName": request.json["firstName"],
                     "lastName": request.json["lastName"],
@@ -186,7 +193,11 @@ class ServiceController:
                 data["validations"] = {
                     "selfie": {"image": request.json["image"]}
                 }
-            if all(field in request.json for field in ["firstName", "lastName", "dateOfBirth"]):
+            if all(
+                field in request.json for field in [
+                    "firstName",
+                    "lastName",
+                    "dateOfBirth"]):
                 data.setdefault("validations", {})["data"] = {
                     "firstName": request.json["firstName"],
                     "lastName": request.json["lastName"],
@@ -253,7 +264,10 @@ class ServiceController:
                 data["validations"] = {
                     "selfie": {"image": request.json["image"]}
                 }
-            if all(field in request.json for field in ["firstName", "dateOfBirth"]):
+            if all(
+                field in request.json for field in [
+                    "firstName",
+                    "dateOfBirth"]):
                 data.setdefault("validations", {})["data"] = {
                     "firstName": request.json["firstName"],
                     "dateOfBirth": request.json["dateOfBirth"],
@@ -288,14 +302,14 @@ class ServiceController:
         except Exception as e:
             return jsonify({"error": str(e)}), 500
 
-
     @staticmethod
     def ad_phone_verification():
         try:
             mobile = request.json["mobile"]
             print(mobile)
 
-            existing_data = ServiceModel.find_data_by_id("vault", {"idNumber": mobile})
+            existing_data = ServiceModel.find_data_by_id(
+                "vault", {"idNumber": mobile})
 
             if existing_data:
                 response_data = {

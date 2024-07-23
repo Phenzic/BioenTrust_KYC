@@ -83,11 +83,9 @@ class ClientApp:
     def find_by_app_id(app_id):
         return app.db.client["client_app"].find_one({"apps.app_id": app_id})
 
-
     @staticmethod
     def find_by_user_id(user_id):
         return app.db.client["client_app"].find_one({"_id": user_id})
-
 
     def save_to_db(self):
         db = app.db.client
@@ -116,6 +114,7 @@ class ServiceCharge:
 
     def to_dict(self):
         return {"_id": self._id, "email": self.email, "services": self.service}
+
 
 class ClientUser:
     @staticmethod

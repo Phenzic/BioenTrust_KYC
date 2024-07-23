@@ -5,6 +5,7 @@ from .controllers import APIController
 sandbox = Blueprint('sandbox', __name__)
 live = Blueprint('live', __name__)
 
+
 @sandbox.route("/", methods=["GET"])
 @live.route("/", methods=["GET"])
 def home():
@@ -27,6 +28,7 @@ def get_all_liveapi():
     client_id = get_jwt_identity()
     return APIController.get_all_liveapi(client_id)
 
+
 @sandbox.route('/get_all_api/<client_id>')
 @jwt_required()
 def get_all_sandboxapi():
@@ -39,6 +41,7 @@ def get_all_sandboxapi():
 def create_sandbox_key():
     user_id = get_jwt_identity()
     return APIController.create_sandbox_key(user_id)
+
 
 @sandbox.route("get-api/<api_key>")
 def get_sandbox_api_logs(api_key):
@@ -61,9 +64,11 @@ def create_live_key():
     user_id = get_jwt_identity()
     return APIController.create_live_key(user_id)
 
+
 @live.route("get-api/<api_key>")
 def get_live_api_logs(api_key):
     return APIController.get_live_api_logs(api_key)
+
 
 @live.route("/delete-key", methods=["DELETE"])
 @jwt_required()

@@ -42,7 +42,7 @@ Creates a new app for the authenticated user and adds it to the user's `apps` ar
   ```json
   {
       "status": "App added successfully",
-      "app_id": "c407230de2da4c5fa30a6898b787b24a"
+      "app_id": "c407230de2da4cdf5fa30a6898b787b24a"
   }
   ```
 

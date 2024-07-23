@@ -17,6 +17,7 @@ from .models import ClientUser
 from ..config import Config
 from app.utils.token_handler import is_refresh_token_revoked, is_access_token_revoked
 
+
 class AuthController:
     @staticmethod
     def home():
@@ -214,4 +215,3 @@ class AuthController:
                 return jsonify({"error": "Invalid token"}), 401
         except Exception as e:
             return jsonify({"error": str(e)}), 400
-

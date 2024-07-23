@@ -38,4 +38,5 @@ class AppController:
         if result.modified_count == 0:
             return jsonify({"error": "Failed to add app to user"}), 500
 
-        return jsonify({"status": "App added successfully", "app_id": app_data["app_id"]}), 201
+        return jsonify({"status": "App added successfully",
+                       "app_id": app_data["app_id"]}), 201

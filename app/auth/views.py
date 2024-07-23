@@ -7,6 +7,7 @@ jwt = JWTManager()
 
 auth = Blueprint("user", __name__)
 
+
 @auth.route("/home", methods=["GET"])
 def home():
     try:
@@ -38,6 +39,7 @@ def protected():
     except Exception as e:
         error_message = {"status": "error", "message": str(e)}
     return jsonify(error_message), 500
+
 
 @auth.route("/signup", methods=["POST"])
 def signup():
