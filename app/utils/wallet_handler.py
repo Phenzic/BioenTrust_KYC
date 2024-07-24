@@ -30,5 +30,5 @@ class Wallet:
             "staus": status,
         }
         db = app.db.wallet
-        db["wallet_charges"].insert_one(transaction)
+        db["transactions"].insert_one(transaction)
         return True
