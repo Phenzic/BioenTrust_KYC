@@ -2,6 +2,7 @@ from functools import wraps
 from flask import jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
+
 def admin_required(refresh=False):
     def decorator(func):
         @wraps(func)

@@ -10,7 +10,8 @@ admin = Blueprint('site_admin', __name__)
 @admin_required(refresh=True)
 def admin_refresh_access():
     return AdminController.admin_refresh_access()
-    
+
+
 @staticmethod
 @admin.route('/register', methods=['POST'])
 def admin_register():
@@ -28,13 +29,11 @@ def admin_dashboard():
     return AdminController.admin_dashboard()
 
 
-
-
-
 @admin.route('/dashboard/data-with-date')
-@admin_required() 
+@admin_required()
 def admin_dashboard_date():
     return AdminController.admin_dashboard()
+
 
 @admin.route('/get-client-details')
 @admin_required()
@@ -47,6 +46,7 @@ def get_client_details():
 def get_service_price():
     return AdminController.get_service_price
 
+
 @admin.route('/set-service-price', methods=['POST'])
 @admin_required()
 def set_service_price():
@@ -57,6 +57,7 @@ def set_service_price():
 @admin_required()
 def wallet_logs():
     return AdminController.wallet_logs()
+
 
 @admin.route('/get-user-role-distribution')
 @admin_required()

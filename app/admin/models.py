@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 from flask import current_app as app
 
+
 class AdminModel:
 
     @staticmethod
@@ -9,7 +10,7 @@ class AdminModel:
 
     @staticmethod
     def add_new_admin(new_admin):
-        return  app.db.admin["admin_data"].insert(new_admin)
+        return app.db.admin["admin_data"].insert(new_admin)
 
     @staticmethod
     def get_all_client_users():
@@ -31,7 +32,8 @@ class AdminModel:
     @staticmethod
     def update_carges(client_id, new_user_service_charge):
         db = app.db.users
-        return db["service_charges"].update_one({"_id": client_id}, new_user_service_charge)
+        return db["service_charges"].update_one(
+            {"_id": client_id}, new_user_service_charge)
 
     @staticmethod
     def find_transaction_by_id(client_id):
@@ -45,4 +47,3 @@ class AdminModel:
     @staticmethod
     def find_admin():
         return app.db.admin["admin_data"].find()
-

@@ -24,7 +24,6 @@ def create_app():
     app.register_blueprint(c_app, url_prefix='/app')
     app.register_blueprint(api, url_prefix='/api')
 
-
     init_utils(app)
     jwt = JWTManager(app)
     with app.app_context():

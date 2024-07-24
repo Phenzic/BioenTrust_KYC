@@ -7,10 +7,7 @@ import datetime
 from .models import AdminModel
 
 
-
-
 class AdminController:
-
 
     @staticmethod
     def admin_refresh_access():
@@ -20,10 +17,10 @@ class AdminController:
 
         identity = jwt["sub"]
         role = jwt["role"]
-        new_access_token = create_access_token(identity=identity, additional_claims={"role": role})
+        new_access_token = create_access_token(
+            identity=identity, additional_claims={"role": role})
 
         return jsonify({"access": new_access_token})
-
 
     @staticmethod
     def admin_register():
@@ -49,7 +46,6 @@ class AdminController:
         except Exception as e:
             return jsonify({"success": False, "error": str(e)}), 500
 
-
     @staticmethod
     def admin_login():
         try:
@@ -61,8 +57,12 @@ class AdminController:
                 return jsonify({"error": "User not found"}), 401
 
             if admin and pbkdf2_sha256.verify(password, admin['password']):
-                access_token = create_access_token(identity=admin['_id'], additional_claims={"role": "admin"})
-                refresh_token = create_refresh_token(identity=admin['_id'], additional_claims={"role": "admin"})
+                access_token = create_access_token(
+                    identity=admin['_id'], additional_claims={
+                        "role": "admin"})
+                refresh_token = create_refresh_token(
+                    identity=admin['_id'], additional_claims={
+                        "role": "admin"})
                 return jsonify(
                     {
                         "message": "Logged In",
@@ -82,8 +82,10 @@ class AdminController:
         verifications = AdminModel.get_all_client_users
         verifications = list(verifications)
 
-        failed_verifications = [x for x in verifications if x["status"] == "Failed"]
-        successful_verifications = [x for x in verifications if x["status"] == "Success"]
+        failed_verifications = [
+            x for x in verifications if x["status"] == "Failed"]
+        successful_verifications = [
+            x for x in verifications if x["status"] == "Success"]
 
         results = {
             "Total": len(list(verifications)),
@@ -92,9 +94,6 @@ class AdminController:
         }
 
         return jsonify(results)
-
-
-
 
     @staticmethod
     def admin_dashboard_date():
@@ -130,8 +129,8 @@ class AdminController:
                     }
                 }
             },
-            { 
-                "$sort": { "_id": 1 }
+            {
+                "$sort": {"_id": 1}
             }
         ]
 
@@ -141,7 +140,6 @@ class AdminController:
         results = {i["_id"]: {"Success": 0, "Failed": 0, **{j["status"]: j["count"] for j in i["status_counts"]}} for i in results}
 
         return jsonify(results)
-
 
     @staticmethod
     def get_client_details():
@@ -156,7 +154,7 @@ class AdminController:
     def get_service_price():
         client_id = request.json["client_id"]
         try:
-            service_charge = AdminModel.get_charges_by_id (client_id)
+            service_charge = AdminModel.get_charges_by_id(client_id)
             if service_charge:
                 return jsonify(service_charge)
             else:
@@ -169,22 +167,27 @@ class AdminController:
         client_id = request.json["client_id"]
         services = request.json["services"]
         try:
-            new_user_service_charge = {"$set": {"service." + k: v for k, v in services.items()}}
+            new_user_service_charge = {
+                "$set": {
+                    "service." + k: v for k,
+                    v in services.items()}}
 
             AdminModel.update_carges(client_id, new_user_service_charge)
             service_charge = AdminModel.get_charges_by_id(client_id)
             return jsonify(service_charge)
         except Exception as e:
             return jsonify({"success": False, "error": str(e)}), 500
+
     @staticmethod
     def wallet_logs():
         client_id = request.json["client_id"]
         try:
-            wallet_logs = AdminModel.find_transaction_by_id (client_id)
+            wallet_logs = AdminModel.find_transaction_by_id(client_id)
             data = list(wallet_logs)[::-1] if wallet_logs else []
             return jsonify(data)
         except Exception as e:
             return jsonify({"success": False, "error": str(e)}), 500
+
     @staticmethod
     def user_role_distribution():
         try:
