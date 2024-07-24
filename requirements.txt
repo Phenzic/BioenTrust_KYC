@@ -18,6 +18,7 @@ gunicorn==22.0.0
 idna==3.7
 itsdangerous==2.2.0
 Jinja2==3.1.4
+jsonpickle==3.2.2
 MarkupSafe==2.1.5
 mypy-extensions==1.0.0
 numpy==2.0.0
