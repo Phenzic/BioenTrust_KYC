@@ -14,6 +14,19 @@
 
 ## Installation
 
+## Docker
+
+1. Pull from Docker hub:
+```
+docker pull phenzic/bioentrust_e-verification:v1.0
+```
+
+2. Run the project:
+```
+docker-compose run
+```
+
+## Github
 1. Clone the repository:
 
    ```bash

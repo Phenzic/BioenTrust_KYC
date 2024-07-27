@@ -1,0 +1,9 @@
+- Testing All Endpoints
+
+- admin Endpoints
+- authentication Endpoints
+- client-admin Endpoints
+- client-app Endpoints
+- Services Endpoints
+- KYC Verification Endpoints
+- Api Endpoints
