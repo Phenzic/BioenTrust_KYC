@@ -215,3 +215,6 @@ class AuthController:
                 return jsonify({"error": "Invalid token"}), 401
         except Exception as e:
             return jsonify({"error": str(e)}), 400
+
+
+
