@@ -1,0 +1,2409 @@
+[
+  {
+    "_id": "aWMsYe",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "fund",
+    "transaction_amount": 500,
+    "old_wallet_balance": {
+      "wallet": 0
+    },
+    "new_wallet_balance": {
+      "$set": {
+        "wallet": 500
+      }
+    },
+    "transaction_time": "2024-03-07T17:05:03.460Z"
+  },
+  {
+    "_id": "E3nPam",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "fund",
+    "transaction_amount": 500,
+    "old_wallet_balance": {
+      "wallet": 500
+    },
+    "new_wallet_balance": {
+      "$set": {
+        "wallet": 1000
+      }
+    },
+    "transaction_time": "2024-03-08T13:03:44.297Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "da5vHc",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "fund",
+    "transaction_amount": 500,
+    "old_wallet_balance": {
+      "wallet": 1000
+    },
+    "new_wallet_balance": {
+      "$set": {
+        "wallet": 1500
+      }
+    },
+    "transaction_time": "2024-03-08T13:06:32.257Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "y9nDBa",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1500,
+    "new_wallet_balance": 1450,
+    "transaction_time": "2024-03-08T13:16:20.911Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "kVsCR6",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "fund",
+    "transaction_amount": 500,
+    "old_wallet_balance": 1450,
+    "new_wallet_balance": 1950,
+    "transaction_time": "2024-03-08T13:22:06.360Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ZVwU0B",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1950,
+    "new_wallet_balance": 1900,
+    "transaction_time": "2024-03-08T14:00:49.221Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "1mVG8B",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:38:28.968Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "PUfhAf",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:38:36.064Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "BfAnpg",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:40:34.525Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "2hWN9b",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:41:19.393Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "dfR2mj",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:41:19.398Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ZXdK7n",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:41:29.532Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "oq8dQe",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:42:44.684Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "VoVHvn",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:50:37.720Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "4Y8qpt",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:50:55.445Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "FCipVZ",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:50:59.692Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "BWhzIw",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:51:06.286Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "q15CVR",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:57:19.406Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "e82DZ1",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T20:57:24.310Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "w33LJN",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T22:31:39.612Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Ga0rZn",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T22:31:42.381Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Tkd0l7",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T22:32:05.135Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "hIjFKV",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T22:32:56.755Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "65LddY",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 597500,
+    "transaction_time": "2024-03-10T22:32:56.930Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "1x98oK",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 100000,
+    "old_wallet_balance": 597500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:33:22.187Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "6h3HvQ",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:34:29.144Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "iX2L4m",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:34:32.806Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "K87ZCJ",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:34:33.581Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "weArb0",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:34:42.985Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Qg2YMn",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:34:42.992Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "VmLXY8",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:34:59.832Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "4myss7",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:35:19.859Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "uQF0Fp",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:35:22.958Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "8yOFIS",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:35:28.848Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "BCS0GT",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:35:30.624Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "BRzyeq",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:35:39.878Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "OZu79D",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:35:42.627Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "R1VA0x",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:35:43.603Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Kkzfxz",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:35:52.849Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Fl72Ee",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:36:18.854Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "RfNY7G",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:36:27.177Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "HnIXhi",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:36:51.059Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "KHxCle",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:36:52.730Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "eZB1gx",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:36:55.617Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "8fn6s2",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:36:59.887Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "84hsDU",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:37:02.760Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "44b5rc",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:37:29.327Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "4BhJHo",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:37:30.626Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "t8kAsu",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:37:34.105Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "RKovd1",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:37:39.174Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "VKLyVt",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:37:48.954Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ZJeEBT",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:37:56.175Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "P6CezC",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:37:59.694Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "IqqQeT",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:00.647Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "blRRgr",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:02.885Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ACHpKN",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:05.669Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "gyMKFU",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:08.860Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "k4ilCV",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:13.854Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "c2C5Ke",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:14.886Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "76czaX",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:15.767Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "FX4VsC",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:22.038Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "HiiRVF",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:31.869Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "IqddlO",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:37.959Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "1onesE",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:38:44.975Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "I3naxF",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:39:00.667Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "9xPNNm",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:39:17.856Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "mu9hec",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:39:39.113Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "HB5hde",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:39:39.685Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "hPTe8s",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:40:06.131Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "DFRpKN",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:40:09.656Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Gu5228",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:40:29.915Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "mYeKcF",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:40:32.699Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "vB1xtp",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:40:53.300Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "nQZd94",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:40:53.304Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Kp5MSv",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:40:57.321Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "xOh6ri",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:40:57.647Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "lIN8nY",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:41:17.908Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "LSKpZ0",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:41:25.060Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "9oexJZ",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:41:35.951Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "TRPuIc",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:41:47.710Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Ayh6XH",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:42:17.527Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "lEIysv",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:42:35.442Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "HLMCBT",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:43:15.902Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "nBPYZa",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:43:21.874Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "uLy2Ca",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:43:24.595Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Rp87UJ",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:43:29.012Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Fe29zw",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:43:29.836Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "WswV4m",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-10T22:43:48.275Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "pjAsjn",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 697500,
+    "transaction_time": "2024-03-11T12:31:00.414Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "lH3NLA",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 300000,
+    "old_wallet_balance": 697500,
+    "new_wallet_balance": 997500,
+    "transaction_time": "2024-03-11T12:31:31.801Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "6HUohY",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 10000,
+    "old_wallet_balance": 997500,
+    "new_wallet_balance": 1007500,
+    "transaction_time": "2024-03-11T12:31:56.045Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "vnk674",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1900,
+    "new_wallet_balance": 1850,
+    "transaction_time": "2024-03-11T22:30:31.864Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "gA78pb",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1850,
+    "new_wallet_balance": 1800,
+    "transaction_time": "2024-03-11T22:32:44.275Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "YR8s37",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1800,
+    "new_wallet_balance": 1750,
+    "transaction_time": "2024-03-11T22:34:20.473Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "SeutzL",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1750,
+    "new_wallet_balance": 1700,
+    "transaction_time": "2024-03-11T22:36:10.614Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "MuYHN3",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1700,
+    "new_wallet_balance": 1650,
+    "transaction_time": "2024-03-11T22:41:02.508Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "f7DW6b",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1650,
+    "new_wallet_balance": 1600,
+    "transaction_time": "2024-03-11T22:47:36.883Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Wwg39R",
+    "user_id": "6574cd1427e2ced6e0afd972",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1600,
+    "new_wallet_balance": 1550,
+    "transaction_time": "2024-03-11T22:49:01.159Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "hPGAKq",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1600,
+    "new_wallet_balance": 1550,
+    "transaction_time": "2024-03-11T22:54:58.160Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "NKpYz6",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1550,
+    "new_wallet_balance": 1500,
+    "transaction_time": "2024-03-11T23:01:35.857Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "q2ZTzR",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1500,
+    "new_wallet_balance": 1450,
+    "transaction_time": "2024-03-11T23:03:04.666Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "hURbLK",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1007500,
+    "new_wallet_balance": 1007500,
+    "transaction_time": "2024-03-12T09:30:59.538Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "9yIwmv",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1007500,
+    "new_wallet_balance": 1007500,
+    "transaction_time": "2024-03-12T11:17:19.630Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "DBh3dv",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 0,
+    "new_wallet_balance": 0,
+    "transaction_time": "2024-03-14T05:20:00.553Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "HggwD3",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007500,
+    "new_wallet_balance": 1007450,
+    "transaction_time": "2024-03-14T08:07:03.092Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "65qFEY",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007450,
+    "new_wallet_balance": 1007400,
+    "transaction_time": "2024-03-14T08:09:28.926Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "45p1TU",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007400,
+    "new_wallet_balance": 1007350,
+    "transaction_time": "2024-03-14T08:13:58.558Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "vemvod",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007350,
+    "new_wallet_balance": 1007300,
+    "transaction_time": "2024-03-14T08:18:07.687Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "XmR4TT",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007300,
+    "new_wallet_balance": 1007250,
+    "transaction_time": "2024-03-14T08:29:36.740Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "dW19QL",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007250,
+    "new_wallet_balance": 1007200,
+    "transaction_time": "2024-03-14T08:30:46.865Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "bOvOZT",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007200,
+    "new_wallet_balance": 1007150,
+    "transaction_time": "2024-03-14T08:33:54.374Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "FKB97P",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007150,
+    "new_wallet_balance": 1007100,
+    "transaction_time": "2024-03-14T08:34:55.992Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "tG2Zno",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007100,
+    "new_wallet_balance": 1007050,
+    "transaction_time": "2024-03-14T08:37:46.921Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "AzqEPN",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007050,
+    "new_wallet_balance": 1007000,
+    "transaction_time": "2024-03-14T08:56:16.886Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "wZuLAG",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1007000,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-14T09:12:52.772Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "anWjPB",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 30000,
+    "new_wallet_balance": 29950,
+    "transaction_time": "2024-03-14T09:37:38.927Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "6mRjtU",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29950,
+    "new_wallet_balance": 29900,
+    "transaction_time": "2024-03-14T09:50:02.595Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "qIMiyY",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29900,
+    "new_wallet_balance": 29850,
+    "transaction_time": "2024-03-14T09:55:33.883Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "BOHVUR",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29850,
+    "new_wallet_balance": 29800,
+    "transaction_time": "2024-03-14T10:13:08.390Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "FcFJLk",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29800,
+    "new_wallet_balance": 29750,
+    "transaction_time": "2024-03-14T10:18:06.512Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "jis7tJ",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29750,
+    "new_wallet_balance": 29700,
+    "transaction_time": "2024-03-14T10:24:49.779Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Hm6LB9",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29700,
+    "new_wallet_balance": 29650,
+    "transaction_time": "2024-03-14T10:26:10.870Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "MtlCnP",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29650,
+    "new_wallet_balance": 29600,
+    "transaction_time": "2024-03-14T10:28:54.077Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "zb8dnu",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29600,
+    "new_wallet_balance": 29550,
+    "transaction_time": "2024-03-14T10:30:10.699Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "u2hPIW",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29550,
+    "new_wallet_balance": 29500,
+    "transaction_time": "2024-03-14T10:36:07.653Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "pKKsVV",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29500,
+    "new_wallet_balance": 29450,
+    "transaction_time": "2024-03-14T14:47:29.585Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "CFA8u3",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29450,
+    "new_wallet_balance": 29400,
+    "transaction_time": "2024-03-15T07:16:16.376Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "a6HG6U",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29400,
+    "new_wallet_balance": 29350,
+    "transaction_time": "2024-03-15T07:22:39.251Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "TSb0Vb",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29350,
+    "new_wallet_balance": 29300,
+    "transaction_time": "2024-03-15T07:52:06.122Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "yCdpue",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29300,
+    "new_wallet_balance": 29250,
+    "transaction_time": "2024-03-16T04:58:24.827Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "DA8yxh",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29250,
+    "new_wallet_balance": 29200,
+    "transaction_time": "2024-03-16T05:04:06.965Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "1vV6pn",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29200,
+    "new_wallet_balance": 29150,
+    "transaction_time": "2024-03-16T05:07:23.243Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "oRWGnv",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29150,
+    "new_wallet_balance": 29100,
+    "transaction_time": "2024-03-16T05:09:02.478Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ouBqYB",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29100,
+    "new_wallet_balance": 29050,
+    "transaction_time": "2024-03-16T05:14:39.325Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "YESSLF",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29050,
+    "new_wallet_balance": 29000,
+    "transaction_time": "2024-03-16T05:16:12.060Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "61AWYv",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 29000,
+    "new_wallet_balance": 28950,
+    "transaction_time": "2024-03-16T05:16:28.565Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "cPfem4",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 28950,
+    "new_wallet_balance": 28900,
+    "transaction_time": "2024-03-16T05:22:24.669Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ssQIbu",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 28900,
+    "new_wallet_balance": 28850,
+    "transaction_time": "2024-03-16T05:29:40.701Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "DZL5kO",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 28850,
+    "new_wallet_balance": 28800,
+    "transaction_time": "2024-03-16T05:32:19.695Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "aSs9GY",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 28800,
+    "new_wallet_balance": 28750,
+    "transaction_time": "2024-03-16T05:34:24.049Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Nxx1Ao",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 28750,
+    "new_wallet_balance": 28700,
+    "transaction_time": "2024-03-16T05:34:46.673Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "FXJbcj",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 28700,
+    "new_wallet_balance": 28650,
+    "transaction_time": "2024-03-16T05:35:56.217Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "9wasZe",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 28650,
+    "new_wallet_balance": 28600,
+    "transaction_time": "2024-03-16T05:38:43.916Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "bRsMpK",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 28600,
+    "new_wallet_balance": 28550,
+    "transaction_time": "2024-03-16T05:40:18.795Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "KdcDoS",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 28550,
+    "new_wallet_balance": 28500,
+    "transaction_time": "2024-03-16T05:42:01.004Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "okZjPl",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 28500,
+    "new_wallet_balance": 28450,
+    "transaction_time": "2024-03-16T05:42:20.221Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "rqT8YF",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-16T14:04:52.150Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "hBJcdC",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-16T14:04:54.099Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "7JRPFH",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:43:49.151Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "NbB5VP",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:43:49.282Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "4fR6MD",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:44:18.700Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "EuHfXg",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:45:07.427Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Hz8Qm0",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:45:10.120Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "mRn6jR",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:45:13.382Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "rurQ87",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:45:28.407Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "dsmJi4",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:45:36.430Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "J8f6G2",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:45:45.561Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "fviTnE",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:45:49.126Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "xjMndu",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:45:53.456Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "6w85D1",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:46:28.410Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "X9Ixy3",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:46:31.101Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "sqflPG",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:46:35.410Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "iMY5kx",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:46:37.372Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "mzSwbB",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:46:37.549Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "omb4rX",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:47:14.495Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "SRjqzX",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:47:15.869Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "tJQd1H",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T12:47:21.237Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "x9iLsz",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T16:25:45.720Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ZbgbNc",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-21T16:25:45.731Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "D22yvW",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-24T02:40:58.177Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "961qEH",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-24T02:41:00.607Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "JloUwF",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-24T02:46:03.948Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "nnde0t",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-24T02:46:04.002Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "IV2Src",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-24T18:07:14.868Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "4qFj3h",
+    "user_id": "d061b5ed8c6643faa36dd5f19ba997c2",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1006950,
+    "new_wallet_balance": 1006950,
+    "transaction_time": "2024-03-24T18:07:17.236Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "eOoErd",
+    "user_id": "921d4b9b28744993850456a328fe08ef",
+    "transaction_type": "fund",
+    "transaction_amount": 1000,
+    "old_wallet_balance": 0,
+    "new_wallet_balance": 1000,
+    "transaction_time": "2024-03-28T17:46:01.473Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "vHMCp0",
+    "user_id": "921d4b9b28744993850456a328fe08ef",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1000,
+    "new_wallet_balance": 1000,
+    "transaction_time": "2024-03-28T17:50:51.812Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "1OULla",
+    "user_id": "921d4b9b28744993850456a328fe08ef",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1000,
+    "new_wallet_balance": 1000,
+    "transaction_time": "2024-03-28T18:02:37.224Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "H5es50",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 5000,
+    "new_wallet_balance": 5000,
+    "transaction_time": "2024-04-03T15:55:11.301Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ykzDiu",
+    "user_id": "921d4b9b28744993850456a328fe08ef",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 1000,
+    "new_wallet_balance": 1000,
+    "transaction_time": "2024-04-09T14:16:32.865Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "juwqJq",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 5000,
+    "new_wallet_balance": 4950,
+    "transaction_time": "2024-04-11T21:00:05.101Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "5N1XcZ",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4950,
+    "new_wallet_balance": 4900,
+    "transaction_time": "2024-04-11T21:12:52.057Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "dcldlJ",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4900,
+    "new_wallet_balance": 4850,
+    "transaction_time": "2024-04-13T15:54:44.918Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "VDGTEN",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4850,
+    "new_wallet_balance": 4800,
+    "transaction_time": "2024-04-18T13:49:23.569Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "NOKbZ9",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4800,
+    "new_wallet_balance": 4750,
+    "transaction_time": "2024-04-18T13:52:10.145Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "6jk0D0",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4750,
+    "new_wallet_balance": 4700,
+    "transaction_time": "2024-04-20T16:09:10.694Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "AfkSL3",
+    "user_id": "9747901d36114ff08bf0d8668ecb139f",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 1450,
+    "new_wallet_balance": 1400,
+    "transaction_time": "2024-04-20T17:44:11.902Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "fHUTac",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4700,
+    "new_wallet_balance": 4700,
+    "transaction_time": "2024-05-02T12:25:18.778Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Vn5qBG",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4700,
+    "new_wallet_balance": 4700,
+    "transaction_time": "2024-05-02T12:25:23.794Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "5ebdFQ",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4700,
+    "new_wallet_balance": 4700,
+    "transaction_time": "2024-05-02T12:25:32.159Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "nrkniT",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4700,
+    "new_wallet_balance": 4700,
+    "transaction_time": "2024-05-02T12:25:32.206Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Vmw0Nh",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4700,
+    "new_wallet_balance": 4650,
+    "transaction_time": "2024-05-13T14:00:09.899Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "3gl333",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4650,
+    "new_wallet_balance": 4600,
+    "transaction_time": "2024-05-13T14:18:08.239Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ybzwZI",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4600,
+    "new_wallet_balance": 4550,
+    "transaction_time": "2024-05-13T14:19:09.746Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "in5mVr",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit nin_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4550,
+    "new_wallet_balance": 4500,
+    "transaction_time": "2024-05-13T15:27:19.969Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "AhsCEk",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4500,
+    "new_wallet_balance": 4450,
+    "transaction_time": "2024-05-13T15:27:35.512Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "19bMq2",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4450,
+    "new_wallet_balance": 4400,
+    "transaction_time": "2024-05-13T15:29:37.139Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "TURjMG",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4400,
+    "new_wallet_balance": 4350,
+    "transaction_time": "2024-05-13T15:30:46.719Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "kzXfvg",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4350,
+    "new_wallet_balance": 4300,
+    "transaction_time": "2024-05-13T15:32:09.008Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "T4zbLP",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4300,
+    "new_wallet_balance": 4250,
+    "transaction_time": "2024-05-13T15:35:12.872Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "k65wNR",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4250,
+    "new_wallet_balance": 4200,
+    "transaction_time": "2024-05-13T15:36:44.376Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Ax2pij",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit facial_comparison",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4200,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-13T15:37:35.454Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "EPUNvv",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-15T23:40:54.391Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Rje1HI",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-15T23:40:54.400Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "veYWOt",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-15T23:44:20.446Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "TIsIpJ",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-15T23:44:20.461Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "J4FkSY",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-15T23:55:05.826Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "gP4Doa",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-15T23:55:05.833Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "mQ0fu5",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-15T23:59:00.189Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "KBNYCe",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-15T23:59:00.190Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "rvz0xN",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-19T03:58:06.314Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "pq1ZUh",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4150,
+    "transaction_time": "2024-05-19T03:58:11.791Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "tYYwrk",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4150,
+    "new_wallet_balance": 4100,
+    "transaction_time": "2024-05-19T11:52:11.102Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "KMbxgk",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4100,
+    "new_wallet_balance": 4050,
+    "transaction_time": "2024-05-19T12:01:30.662Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "zRu2wb",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4050,
+    "new_wallet_balance": 4000,
+    "transaction_time": "2024-05-19T12:06:49.398Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "v7SVSD",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 4000,
+    "new_wallet_balance": 3950,
+    "transaction_time": "2024-05-19T12:11:06.707Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Z651t4",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 3950,
+    "new_wallet_balance": 3950,
+    "transaction_time": "2024-05-20T12:54:36.815Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "cPCVi1",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 3950,
+    "new_wallet_balance": 3950,
+    "transaction_time": "2024-05-20T12:54:40.018Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "kfivhG",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 3950,
+    "new_wallet_balance": 3950,
+    "transaction_time": "2024-05-20T13:05:59.767Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ouMT1Z",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 3950,
+    "new_wallet_balance": 3950,
+    "transaction_time": "2024-05-20T13:06:04.680Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "r8ZGak",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 3950,
+    "new_wallet_balance": 3950,
+    "transaction_time": "2024-05-20T13:06:43.533Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "h3iv69",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 3950,
+    "new_wallet_balance": 3950,
+    "transaction_time": "2024-05-20T13:06:43.538Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "3ydGm6",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 3950,
+    "new_wallet_balance": 3950,
+    "transaction_time": "2024-05-20T13:06:46.381Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "1bnO1V",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 3950,
+    "new_wallet_balance": 3950,
+    "transaction_time": "2024-05-20T13:06:46.392Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "Gojbd2",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 3950,
+    "new_wallet_balance": 3900,
+    "transaction_time": "2024-05-20T15:21:02.829Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "ukY0Km",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 3900,
+    "new_wallet_balance": 3850,
+    "transaction_time": "2024-05-20T16:48:52.144Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "x9PRqF",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 3850,
+    "new_wallet_balance": 3800,
+    "transaction_time": "2024-05-20T16:50:38.842Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "6v2DpJ",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 3800,
+    "new_wallet_balance": 3750,
+    "transaction_time": "2024-05-20T17:09:38.351Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "63v24Z",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 3750,
+    "new_wallet_balance": 3700,
+    "transaction_time": "2024-05-26T16:09:14.511Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "sIWfgA",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 3700,
+    "new_wallet_balance": 3650,
+    "transaction_time": "2024-05-26T16:12:12.008Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "HoJn9L",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 3650,
+    "new_wallet_balance": 3600,
+    "transaction_time": "2024-05-26T16:13:41.654Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "9cLvfG",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 3600,
+    "new_wallet_balance": 3550,
+    "transaction_time": "2024-05-26T16:14:51.743Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "d9RVFg",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "Debit bvn_verification",
+    "transaction_amount": 50,
+    "old_wallet_balance": 3550,
+    "new_wallet_balance": 3500,
+    "transaction_time": "2024-05-26T16:29:26.811Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "qy990A",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 3500,
+    "new_wallet_balance": 3500,
+    "transaction_time": "2024-06-06T18:52:33.736Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "bYHTOB",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 3500,
+    "new_wallet_balance": 3500,
+    "transaction_time": "2024-06-06T18:52:33.744Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "WLyOIr",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 5000,
+    "old_wallet_balance": 3500,
+    "new_wallet_balance": 8500,
+    "transaction_time": "2024-06-11T10:45:27.459Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "4XdEfB",
+    "user_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 8500,
+    "new_wallet_balance": 8500,
+    "transaction_time": "2024-06-24T14:25:02.597Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "V8QBP2",
+    "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "transaction_type": "fund",
+    "transaction_amount": 0,
+    "old_wallet_balance": 28450,
+    "new_wallet_balance": 28450,
+    "transaction_time": "2024-06-30T10:04:34.867Z",
+    "staus": "Success"
+  },
+  {
+    "_id": "mUqGz8",
+    "user_id": "921d4b9b28744993850456a328fe08ef",
+    "transaction_type": "fund",
+    "transaction_amount": 8000,
+    "old_wallet_balance": 1000,
+    "new_wallet_balance": 9000,
+    "transaction_time": "2024-07-19T13:39:35.553Z",
+    "staus": "Success"
+  }
+]
