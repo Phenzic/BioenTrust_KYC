@@ -121,7 +121,7 @@ class ClientUser:
     def insert_new_request(new_request):
         app.db.client["client_user"].insert_one(new_request)
 
-
-def get_user_details(user_id):
-    user_details = app.db.users.find_one({"_id": user_id})
-    return user_details
+    @staticmethod
+    def get_user_details(user_id):
+        user_details = app.db.users.find_one({"_id": user_id})
+        return user_details

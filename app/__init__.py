@@ -1,3 +1,4 @@
+from .client_admin.views import client_admin
 from flask_jwt_extended import JWTManager
 from .api.views import sandbox, live
 from .client_app.views import c_app
@@ -18,11 +19,13 @@ def create_app():
     CORS(app, supports_credentials=True, origins=app.config["CORS_ORIGINS"])
 
     app.register_blueprint(sandbox, url_prefix='/api/sandbox')
-    app.register_blueprint(admin, url_prefix='/admin')
     app.register_blueprint(live, url_prefix='/api/live')
+    app.register_blueprint(client_admin, url_prefix="/client")
+    app.register_blueprint(admin, url_prefix='/admin')
     app.register_blueprint(auth, url_prefix="/user")
     app.register_blueprint(c_app, url_prefix='/app')
     app.register_blueprint(api, url_prefix='/api')
+
 
     init_utils(app)
     jwt = JWTManager(app)
