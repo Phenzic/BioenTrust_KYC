@@ -1,0 +1,103 @@
+[
+  {
+    "_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "first_name": "Sola",
+    "last_name": "Bioentrust",
+    "email": "leom20031@gmail.com",
+    "password": "$pbkdf2-sha256$29000$ScnZG0OIkbJ2rlUq5VxrzQ$MquVVpuMkqW6w0XB2xrZxBQ.CELsy6Ri.4v0Yvjkn3Y",
+    "wallet": 8500
+  },
+  {
+    "_id": "95978d4ad5b74fb98c24b344a5db3eca",
+    "first_name": "Sola",
+    "last_name": "Bioentrust",
+    "wallet": 450,
+    "password": "$pbkdf2-sha256$29000$GMOYc27NWUuJ0RqjVEqpNQ$fgHFYo40wr9pu/YsjSOHdZQOWu8Rux27PSRMUir7LyQ",
+    "email": "jacethehero123@gmail.com"
+  },
+  {
+    "_id": "ae184c9c167d48b98ebcf87450786807",
+    "email": "kinyichukwuoselukwue@gmail.com",
+    "last_name": "Kin and Co",
+    "wallet": 0,
+    "first_name": "Org.",
+    "password": "$pbkdf2-sha256$29000$iFHqXUsJQchZy9kbY8z5/w$qstbbDVn.bSELG9JD2ONmbqz1.Pl6/5vZWuY2rgDFJ0"
+  },
+  {
+    "_id": "21a3a91a55274ce7836dfa6a24615924",
+    "email": "osekin4@gmail.com",
+    "last_name": "lasbon",
+    "wallet": 0,
+    "first_name": "jako",
+    "password": "$pbkdf2-sha256$29000$4lwLAQCgVAoBgJASIkTI.Q$jhhW4WaTs3vcB.w9t7R0Rf1ZPAfTen7EFccLmqzUag8"
+  },
+  {
+    "_id": "59f45349dfe7445cab8eaa0c65174965",
+    "email": "juliusayoola5@gmail.com",
+    "last_name": "Julius",
+    "wallet": 0,
+    "first_name": "Mayowa",
+    "password": "$pbkdf2-sha256$29000$S6l1LsWY0xpj7H3P.b9Xag$lLKIFrLUIPPE.jhI2uXy/Ti2AXd.D/0tNWiFlzMtkuE"
+  },
+  {
+    "_id": "5953dac1981c476c9c4395bad285dee2",
+    "email": "Jiddaplus@gmail.com",
+    "last_name": "jidda",
+    "wallet": 0,
+    "first_name": "ateeq",
+    "password": "$pbkdf2-sha256$29000$6b23Vso5h5ByDqGU8t47Zw$X0LaPmCpVRMsF80TuAVOHujXSWeclGkEt2dFpyastEk"
+  },
+  {
+    "_id": "617099cc67f6476d9c1904f6e2aaeea1",
+    "first_name": "Org.",
+    "wallet": 0,
+    "last_name": "Pysav",
+    "email": "pysavego@gmail.com",
+    "password": "$pbkdf2-sha256$29000$XEuJMWZsTSllbG0NoRQCgA$Icgc8VUa/8dnyTlgrtCMKMaqNegOpGaRkiSlakjDHac"
+  },
+  {
+    "_id": "9747901d36114ff08bf0d8668ecb139f",
+    "first_name": "Oghenetega",
+    "wallet": 1400,
+    "last_name": "Biokoro",
+    "email": "teggyg123@gmail.com",
+    "password": "$pbkdf2-sha256$29000$QCjlvBcCAEBozdn7n/P.nw$qiNnm.8mgP8bHSn4sBJ/lqGS4KmJ7rNwanit8ICrg5c"
+  },
+  {
+    "_id": "23061642ec3f4b8991250abea00eed12",
+    "first_name": "Org.",
+    "wallet": 0,
+    "last_name": "pipi",
+    "email": "brianjolomi17@gmail.com",
+    "password": "$pbkdf2-sha256$29000$oLR2LgWAEAIAgBDCOGcspQ$rMUdqnumdSVyj8yhpmDSHsh8Q5p29DKKZsO6k5KYZTQ"
+  },
+  {
+    "_id": "92b8dadb06054ea5ba93aded6ab093fc",
+    "first_name": "Oghenetega",
+    "wallet": 5000,
+    "last_name": "Biokoro",
+    "email": "trainpythonista@gmail.com",
+    "password": "$pbkdf2-sha256$29000$LGWMUSpF6J3znvMeA.AcAw$37CIxtYIY/8C9.kgjPqDv76Awe/gRXuylK4QNgcOfEY",
+    "api_keys": [
+      "$pbkdf2-sha256$29000$F8L4n3MuhdD6n5Pyfu/9Hw$AYyrMVXO8.M3J.F0lO7xDtEIKhhnd./24tELSLuDQOQ",
+      "$pbkdf2-sha256$29000$B.Bcq9Wa834PofQeg5DyPg$36l5sNsIq3R.aa5aMFEQjYiOPOCbo8ZNnf1eZ0CgKlE",
+      "$pbkdf2-sha256$29000$E0KoFWJMCUFoLcW4937vvQ$MiC5eiK/cB2/jeVpYKk3eCVgXE7xMa7Mg6AZIqZqoUU"
+    ]
+  },
+  {
+    "_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "first_name": "Mayowa",
+    "last_name": "Phenzic",
+    "password": "$pbkdf2-sha256$29000$YKzVWivl/J.z1rr3XmvNGQ$x0e97RkrIHnGv/lvyJyAHNoQTQ2MYLO8chk.X8f42Wg",
+    "email": "ogungbolamayowa@gmail.com",
+    "wallet": 28450
+  },
+  {
+    "_id": "921d4b9b28744993850456a328fe08ef",
+    "first_name": "Org.",
+    "last_name": "JD Labs",
+    "password": "$pbkdf2-sha256$29000$AwAgBKD03ts7J4Rwbg2hVA$fD5cDIm28f12qFqk1P2QSvLIRgOjGkSZt55jRJzRbnk",
+    "email": "kinyichukwuose@gmail.com",
+    "wallet": 9000
+  }
+]

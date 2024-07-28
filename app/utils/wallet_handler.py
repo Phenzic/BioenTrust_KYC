@@ -31,4 +31,5 @@ class Wallet:
         }
         db = app.db.wallet
         db["transactions"].insert_one(transaction)
+        print('happened')
         return True

@@ -33,14 +33,15 @@ class ClientAdminController:
 
         except Exception as e:
             return jsonify({"success": False, "error": str(e)}), 500
+    
     @staticmethod
-    def get_user_details_endpoint():
+    def get_user_details(request):
         client_user_id = request.json['user_id']
-        client_user = app.db.client_user.find_one({"user_id": client_user_id})
-        return jsonify({"user_data": ClientAdminModels.get_user_details(client_user_id), "live_image": client_user["live_image"]})
+        client_user = app.db.vaults["vault"].find_one({"user_id": client_user_id})
+        return jsonify({"user_data": ClientAdminModels.get_user_details(client_user_id)})
 
     @staticmethod
-    def update_user_details():
+    def update_app():
         client_id = get_jwt_identity()
         user_id = request.json['user_id']
         new_status = request.json['status']
@@ -63,33 +64,28 @@ class ClientAdminController:
         return jsonify(result)
     
     @staticmethod
-    def get_wallet_transactions():
-        return ClientAdminModels.get_wallet_transactions
+    def get_wallet_transactions(user_id):
+        return ClientAdminModels.get_wallet_transactions(user_id)
 
     @staticmethod
-    def fund_wallet():
+    def fund_wallet(request):
         client_id = get_jwt_identity()
         user = app.db.users["user"].find_one({"_id": client_id})
         transaction_amount = request.json["amount"]
         old_wallet_balance = {"wallet": user["wallet"]}
-        new_wallet_balance = old_wallet_balance["wallet"] + transaction_amount
+        new_wallet_balance = int(old_wallet_balance["wallet"]) + int(transaction_amount)
 
         new_wallet_balance = { "$set": { "wallet": new_wallet_balance} }
 
-        # Generate a random transaction ID of length 6
-        # transaction_id = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
-
-        # Log the transaction
         try:
             Wallet.transaction_log(client_id, "fund", transaction_amount, old_wallet_balance["wallet"], new_wallet_balance["$set"]["wallet"], "Success")
-            
         except:
             Wallet.transaction_log(client_id, "fund", transaction_amount, old_wallet_balance, new_wallet_balance, "Failed")
 
 
 
         app.db.users["user"].update_one({"_id": client_id}, new_wallet_balance)
-
+        # Wallet["user"].update_one({"_id": client_id}, new_wallet_balance)
         user = app.db.users["user"].find_one({"_id": client_id})
 
         return user
@@ -109,7 +105,7 @@ class ClientAdminController:
         return jsonify(result)
 
     @staticmethod
-    def delete_app():
+    def delete_app(request):
         client_id = get_jwt_identity()
         desired_app_id = request.json["app_id"]
         
@@ -122,3 +118,16 @@ class ClientAdminController:
         
         return jsonify(client_apps_details)
 
+
+    @staticmethod
+    def get_app(requests):
+        app_id = requests.json["app_id"]
+        return ClientAdminModels.get_app_by_id(app_id)
+    
+
+    @staticmethod
+    def get_client_profile(client_id):
+        # app_id = request.json["app_id"]
+        return ClientAdminModels.get_client_profile(client_id)
+    
+    

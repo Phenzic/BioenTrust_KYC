@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "28ef9bcc9ed713300b87ba63037614fedff76982e0836514",
+    "logs": [
+      {
+        "api_key": "28ef9bcc9ed713300b87ba63037614fedff76982e0836514",
+        "secret_key": "f753888b94745eaffcfb68d279c601bbeaac1072621cd979ae8d1eba4fce945b",
+        "app_id": "21ba5b5c748f449f9bbf892cd0c51744",
+        "user_id": "b5655b62df7b48bd9e13b10ce66c5057",
+        "charges": 50,
+        "app_name": "enjwala",
+        "balance": 28800,
+        "request_type": "bvn_verification",
+        "request": "API",
+        "requestTime": "2024-03-16T05:34:25.442362",
+        "user_data": {
+          "user_id": "656e457f90d81de615c5a77d"
+        }
+      },
+      {
+        "api_key": "28ef9bcc9ed713300b87ba63037614fedff76982e0836514",
+        "secret_key": "f753888b94745eaffcfb68d279c601bbeaac1072621cd979ae8d1eba4fce945b",
+        "client_id": "b5655b62df7b48bd9e13b10ce66c5057",
+        "app_id": "21ba5b5c748f449f9bbf892cd0c51744",
+        "charges": 50,
+        "app_name": "enjwala",
+        "balance": 28550,
+        "request_type": "bvn_verification",
+        "request": "API",
+        "user_data": {
+          "user_id": "656e457f90d81de615c5a77d"
+        }
+      },
+      {
+        "api_key": "28ef9bcc9ed713300b87ba63037614fedff76982e0836514",
+        "secret_key": "f753888b94745eaffcfb68d279c601bbeaac1072621cd979ae8d1eba4fce945b",
+        "client_id": "b5655b62df7b48bd9e13b10ce66c5057",
+        "app_id": "21ba5b5c748f449f9bbf892cd0c51744",
+        "charges": 50,
+        "app_name": "enjwala",
+        "balance": 28500,
+        "request_type": "bvn_verification",
+        "request": "API",
+        "user_data": {
+          "user_id": "656e457f90d81de615c5a77d"
+        }
+      }
+    ]
+  }
+]

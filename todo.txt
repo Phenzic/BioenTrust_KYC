@@ -1,6 +1,16 @@
 - Testing All Endpoints
 
 - admin Endpoints
+    - Websocket to get all users data (get_data)
+    - get client user details() ✅
+    - get all data
+    - get all data with date
+    - get-apps ✅
+    - delete_apps ✅
+    - update app details
+    - fund ✅
+    - get wallet transactions ✅
+
 - authentication Endpoints
 - client-admin Endpoints
 - client-app Endpoints

@@ -1,0 +1,86 @@
+[
+  {
+    "_id": "29b19bea106f4ff3a79005d77b7ef6e1",
+    "email": "leom20031@gmail.com",
+    "service": {
+      "e-affidavit": 100,
+      "e-attendance": 100,
+      "e-census": 200,
+      "kyc": 50
+    }
+  },
+  {
+    "_id": "ea280e6287874f86863497aa3e7547ae",
+    "email": "ogungbolamayowa@gmail.com",
+    "service": {}
+  },
+  {
+    "_id": "95978d4ad5b74fb98c24b344a5db3eca",
+    "email": "jacethehero123@gmail.com",
+    "service": {
+      "kyc": 50
+    }
+  },
+  {
+    "_id": "ae184c9c167d48b98ebcf87450786807",
+    "email": "kinyichukwuoselukwue@gmail.com",
+    "service": {}
+  },
+  {
+    "_id": "21a3a91a55274ce7836dfa6a24615924",
+    "email": "osekin4@gmail.com",
+    "service": {}
+  },
+  {
+    "_id": "59f45349dfe7445cab8eaa0c65174965",
+    "email": "juliusayoola5@gmail.com",
+    "service": {}
+  },
+  {
+    "_id": "5953dac1981c476c9c4395bad285dee2",
+    "email": "Jiddaplus@gmail.com",
+    "service": {}
+  },
+  {
+    "_id": "617099cc67f6476d9c1904f6e2aaeea1",
+    "email": "pysavego@gmail.com",
+    "service": {}
+  },
+  {
+    "_id": "8e08252890a94a3c850ea0d8c1feab4c",
+    "email": "ogungbolamayowa@gmail.com",
+    "service": {}
+  },
+  {
+    "_id": "9747901d36114ff08bf0d8668ecb139f",
+    "email": "teggyg123@gmail.com",
+    "service": {
+      "kyc": 50,
+      "e-affidavit": 100,
+      "e-attendance": 100,
+      "e-census": 200
+    }
+  },
+  {
+    "_id": "23061642ec3f4b8991250abea00eed12",
+    "email": "brianjolomi17@gmail.com",
+    "service": {}
+  },
+  {
+    "_id": "92b8dadb06054ea5ba93aded6ab093fc",
+    "email": "trainpythonista@gmail.com",
+    "service": {}
+  },
+  {
+    "_id": "b5655b62df7b48bd9e13b10ce66c5057",
+    "email": "ogungbolamayowa@gmail.com",
+    "service": {
+      "kyc": 33
+    }
+  },
+  {
+    "_id": "921d4b9b28744993850456a328fe08ef",
+    "email": "kinyichukwuose@gmail.com",
+    "service": {}
+  }
+]

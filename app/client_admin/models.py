@@ -1,13 +1,13 @@
 import datetime
 import uuid
-from flask import current_app as app
+from flask import current_app as app, jsonify
 import requests
 
 class ClientAdminModels:
 
     @staticmethod
     def get_user_details(user_id):
-        user_details = app.db.users.find_one({"_id": user_id})
+        user_details = app.db.vaults["vault"].find_one({"user_id": user_id})
         return user_details
 
     @staticmethod
@@ -54,7 +54,8 @@ class ClientAdminModels:
     #     return app.db.client_app.update_one({"_id": client_id}, {"$push": {"apps": app_entry}})
     @staticmethod
     def get_app_by_id(app_id):
-        return app.db.client["client_app"].find_one({"apps": {"$elemMatch": {"app_id": app_id}}}, {"_id": 0, "apps.$": 1})
+        return jsonify(app.db.client["client_app"].find_one({"apps.app_id": app_id}, {"apps.$": 1}))
+
 
     @staticmethod
     def delete_app_by_id(client_id, app_id):
@@ -74,9 +75,14 @@ class ClientAdminModels:
         app.db.wallet_transactions.insert_one(transaction)
 
     @staticmethod
-    def get_wallet_transactions(client_id):
-        return list(app.db.wallet["transactions"].find({"user_id": client_id}))
+    def get_wallet_transactions(user_id):
+        return list(app.db.wallet["transactions"].find({"user_id": user_id}))
 
     @staticmethod
     def update_wallet_balance(client_id, new_balance):
         return app.db.users["user"].update_one({"_id": client_id}, {"$set": {"wallet": new_balance}})
+
+
+
+
+

@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "5f2d3619-18a8-4692-be44-5246e2db6478",
+    "name": "Tega",
+    "email": "tads@gmail.com",
+    "password": "$pbkdf2-sha256$29000$SkkJAeCccw6BEOJ8L.Ucow$q8kwdK8J8YUwC44SVHiP6PGXNc/WwAUJgdfGX4qYDi8",
+    "created_at": "2024-03-14T11:23:56.022Z"
+  },
+  {
+    "_id": "e7f85042-45c7-4d4b-90b7-446a58f4bcb8",
+    "name": "kin",
+    "email": "kinyichukwuose@gmail.com",
+    "password": "$pbkdf2-sha256$29000$1dqbE6I0xtg7x7i31lrrHQ$fSUE5k8IKhrgympkyBCeag5cE9/twcOmmLNWpZltSkE",
+    "created_at": "2024-03-18T14:29:05.616Z"
+  }
+]
