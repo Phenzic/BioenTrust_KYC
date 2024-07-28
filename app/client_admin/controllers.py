@@ -76,7 +76,7 @@ class ClientAdminController:
 
         new_wallet_balance = { "$set": { "wallet": new_wallet_balance} }
 
-        # # Generate a random transaction ID of length 6
+        # Generate a random transaction ID of length 6
         # transaction_id = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
 
         # Log the transaction
