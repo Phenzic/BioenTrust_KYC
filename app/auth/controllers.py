@@ -95,7 +95,7 @@ class AuthController:
 
     @staticmethod
     def verify_sms(request):
-        app_id = request.json["app_id"]
+        # app_id = request.json["app_id"]
         # document = ClientApp.find_by_app_id(app_id)
         user_otp = request.json["otp"]
         otp_request_id = request.json["otp_request_id"]
