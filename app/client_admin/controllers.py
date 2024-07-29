@@ -1,7 +1,6 @@
-from flask import Blueprint, jsonify, request, after_this_request
+from flask import Blueprint, jsonify, request
 from flask import current_app as app
 from flask_jwt_extended import get_jwt_identity
-
 from ..utils.wallet_handler import Wallet
 from .models import ClientAdminModels
 
@@ -37,20 +36,22 @@ class ClientAdminController:
 
     @staticmethod
     def get_user_details(request):
-        client_user_id = request.json['user_id']
-        client_user = app.db.vaults["vault"].find_one(
+        client_user_id = request.json["user_id"]
+        app.db.vaults["vault"].find_one(
             {"user_id": client_user_id})
         return jsonify(
-            {"user_data": ClientAdminModels.get_user_details(client_user_id)})
+            {"user_data": ClientAdminModels.get_user_details(client_user_id)}
+        )
 
     @staticmethod
     def update_app():
         client_id = get_jwt_identity()
-        user_id = request.json['user_id']
-        new_status = request.json['status']
-        new_status_description = request.json['status_description']
+        user_id = request.json["user_id"]
+        new_status = request.json["status"]
+        new_status_description = request.json["status_description"]
         ClientAdminModels.update_client_user_status(
-            client_id, user_id, new_status, new_status_description)
+            client_id, user_id, new_status, new_status_description
+        )
         client_profile = ClientAdminModels.get_client_profile(client_id)
         return jsonify(client_profile)
 
@@ -59,7 +60,7 @@ class ClientAdminController:
         client_id = get_jwt_identity()
         pipeline = [
             {"$match": {"_id": client_id}},
-            {"$group": {"_id": "$status", "count": {"$sum": 1}}}
+            {"$group": {"_id": "$status", "count": {"$sum": 1}}},
         ]
         result = list(app.db.client["client_user"].aggregate(pipeline))
         result = {i["_id"]: i["count"] for i in result}
@@ -89,7 +90,8 @@ class ClientAdminController:
                 transaction_amount,
                 old_wallet_balance["wallet"],
                 new_wallet_balance["$set"]["wallet"],
-                "Success")
+                "Success",
+            )
         except BaseException:
             Wallet.transaction_log(
                 client_id,
@@ -97,7 +99,8 @@ class ClientAdminController:
                 transaction_amount,
                 old_wallet_balance,
                 new_wallet_balance,
-                "Failed")
+                "Failed",
+            )
 
         app.db.users["user"].update_one({"_id": client_id}, new_wallet_balance)
         # Wallet["user"].update_one({"_id": client_id}, new_wallet_balance)
@@ -109,24 +112,39 @@ class ClientAdminController:
     def dashboard_date():
         client_id = get_jwt_identity()
         pipeline = [
+            {"$match": {"_id": client_id}},
             {
-                "$match": {
-                    "_id": client_id}}, {
                 "$project": {
                     "date": {
-                        "$dateToString": {
-                            "format": "%Y-%m-%d", "date": "$requestTime"}}, "status": "$status"}}, {
-                                "$group": {
-                                    "_id": {
-                                        "date": "$date", "status": "$status"}, "count": {
-                                            "$sum": 1}}}, {
-                                                "$group": {
-                                                    "_id": "$_id.date", "status_counts": {
-                                                        "$push": {
-                                                            "status": "$_id.status", "count": "$count"}}}}]
+                        "$dateToString": {"format": "%Y-%m-%d", "date": "$requestTime"}
+                    },
+                    "status": "$status",
+                }
+            },
+            {
+                "$group": {
+                    "_id": {"date": "$date", "status": "$status"},
+                    "count": {"$sum": 1},
+                }
+            },
+            {
+                "$group": {
+                    "_id": "$_id.date",
+                    "status_counts": {
+                        "$push": {"status": "$_id.status", "count": "$count"}
+                    },
+                }
+            },
+        ]
         result = list(app.db.client["client_user"].aggregate(pipeline))
-        result = {i["_id"]: {"Success": 0, "Failed": 0, **{j["status"]
-            : j["count"] for j in i["status_counts"]}} for i in result}
+        result = {
+            i["_id"]: {
+                "Success": 0,
+                "Failed": 0,
+                **{j["status"]: j["count"] for j in i["status_counts"]},
+            }
+            for i in result
+        }
         return jsonify(result)
 
     @staticmethod

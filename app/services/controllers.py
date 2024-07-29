@@ -17,8 +17,10 @@ class ServiceController:
         if user_detail:
             return jsonify({"user_detail": user_detail}), 200
         else:
-            return jsonify(
-                {"error": "Something went wrong! Confirm if user exists!"}), 404
+            return (
+                jsonify({"error": "Something went wrong! Confirm if user exists!"}),
+                404,
+            )
 
     @staticmethod
     def bvn_verification():
@@ -30,9 +32,9 @@ class ServiceController:
                 response_data = {
                     "data": {
                         "_id": existing_data["id"],
-                        "firstName": existing_data['firstName'],
-                        "middleName": existing_data['middleName'],
-                        "lastName": existing_data['lastName'],
+                        "firstName": existing_data["firstName"],
+                        "middleName": existing_data["middleName"],
+                        "lastName": existing_data["lastName"],
                         "image": existing_data["image"],
                         "status": existing_data["status"],
                         "mobile": existing_data["mobile"],
@@ -46,14 +48,12 @@ class ServiceController:
                 "isSubjectConsent": True,
             }
             if "image" in request.json:
-                data["validations"] = {
-                    "selfie": {"image": request.json["image"]}
-                }
+                data["validations"] = {"selfie": {
+                    "image": request.json["image"]}}
             if all(
-                field in request.json for field in [
-                    "firstName",
-                    "lastName",
-                    "dateOfBirth"]):
+                field in request.json
+                for field in ["firstName", "lastName", "dateOfBirth"]
+            ):
                 data.setdefault("validations", {})["data"] = {
                     "firstName": request.json["firstName"],
                     "lastName": request.json["lastName"],
@@ -65,10 +65,7 @@ class ServiceController:
                 data["premiumBVN"] = True
 
             url = f"{youverify}/v2/api/identity/ng/bvn"
-            headers = {
-                'Content-Type': 'application/json',
-                'token': token
-            }
+            headers = {"Content-Type": "application/json", "token": token}
             response = requests.post(url, headers=headers, json=data)
             response_data = response.json()
 
@@ -79,9 +76,9 @@ class ServiceController:
             response_data = {
                 "data": {
                     "_id": new_entry["id"],
-                    "firstName": new_entry['firstName'],
-                    "middleName": new_entry['middleName'],
-                    "lastName": new_entry['lastName'],
+                    "firstName": new_entry["firstName"],
+                    "middleName": new_entry["middleName"],
+                    "lastName": new_entry["lastName"],
                     "image": new_entry["image"],
                     "status": new_entry["status"],
                     "mobile": new_entry["mobile"],
@@ -103,9 +100,9 @@ class ServiceController:
                 response_data = {
                     "data": {
                         "_id": existing_data["id"],
-                        "firstName": existing_data['firstName'],
-                        "middleName": existing_data['middleName'],
-                        "lastName": existing_data['lastName'],
+                        "firstName": existing_data["firstName"],
+                        "middleName": existing_data["middleName"],
+                        "lastName": existing_data["lastName"],
                         "image": existing_data["image"],
                         "status": existing_data["status"],
                         "mobile": existing_data["mobile"],
@@ -120,14 +117,12 @@ class ServiceController:
                 "isSubjectConsent": True,
             }
             if "image" in request.json:
-                data["validations"] = {
-                    "selfie": {"image": request.json["image"]}
-                }
+                data["validations"] = {"selfie": {
+                    "image": request.json["image"]}}
             if all(
-                field in request.json for field in [
-                    "firstName",
-                    "lastName",
-                    "dateOfBirth"]):
+                field in request.json
+                for field in ["firstName", "lastName", "dateOfBirth"]
+            ):
                 data.setdefault("validations", {})["data"] = {
                     "firstName": request.json["firstName"],
                     "lastName": request.json["lastName"],
@@ -135,10 +130,7 @@ class ServiceController:
                 }
 
             url = f"{youverify}/v2/api/identity/ng/vnin"
-            headers = {
-                'Content-Type': 'application/json',
-                'token': token
-            }
+            headers = {"Content-Type": "application/json", "token": token}
             response = requests.post(url, headers=headers, json=data)
             response_data = response.json()
 
@@ -149,9 +141,9 @@ class ServiceController:
             response_data = {
                 "data": {
                     "_id": new_entry["id"],
-                    "firstName": new_entry['firstName'],
-                    "middleName": new_entry['middleName'],
-                    "lastName": new_entry['lastName'],
+                    "firstName": new_entry["firstName"],
+                    "middleName": new_entry["middleName"],
+                    "lastName": new_entry["lastName"],
                     "image": new_entry["image"],
                     "status": new_entry["status"],
                     "mobile": new_entry["mobile"],
@@ -173,9 +165,9 @@ class ServiceController:
                 response_data = {
                     "data": {
                         "_id": existing_data["id"],
-                        "firstName": existing_data['firstName'],
-                        "middleName": existing_data['middleName'],
-                        "lastName": existing_data['lastName'],
+                        "firstName": existing_data["firstName"],
+                        "middleName": existing_data["middleName"],
+                        "lastName": existing_data["lastName"],
                         "image": existing_data["image"],
                         "status": existing_data["status"],
                         "mobile": existing_data["mobile"],
@@ -190,14 +182,12 @@ class ServiceController:
                 "isSubjectConsent": True,
             }
             if "image" in request.json:
-                data["validations"] = {
-                    "selfie": {"image": request.json["image"]}
-                }
+                data["validations"] = {"selfie": {
+                    "image": request.json["image"]}}
             if all(
-                field in request.json for field in [
-                    "firstName",
-                    "lastName",
-                    "dateOfBirth"]):
+                field in request.json
+                for field in ["firstName", "lastName", "dateOfBirth"]
+            ):
                 data.setdefault("validations", {})["data"] = {
                     "firstName": request.json["firstName"],
                     "lastName": request.json["lastName"],
@@ -205,10 +195,7 @@ class ServiceController:
                 }
 
             url = f"{youverify}/v2/api/identity/ng/nin"
-            headers = {
-                'Content-Type': 'application/json',
-                'token': token
-            }
+            headers = {"Content-Type": "application/json", "token": token}
             response = requests.post(url, headers=headers, json=data)
             response_data = response.json()
 
@@ -219,9 +206,9 @@ class ServiceController:
             response_data = {
                 "data": {
                     "_id": new_entry["id"],
-                    "firstName": new_entry['firstName'],
-                    "middleName": new_entry['middleName'],
-                    "lastName": new_entry['lastName'],
+                    "firstName": new_entry["firstName"],
+                    "middleName": new_entry["middleName"],
+                    "lastName": new_entry["lastName"],
                     "image": new_entry["image"],
                     "status": new_entry["status"],
                     "mobile": new_entry["mobile"],
@@ -243,9 +230,9 @@ class ServiceController:
                 response_data = {
                     "data": {
                         "_id": existing_data["id"],
-                        "firstName": existing_data['firstName'],
-                        "middleName": existing_data['middleName'],
-                        "lastName": existing_data['lastName'],
+                        "firstName": existing_data["firstName"],
+                        "middleName": existing_data["middleName"],
+                        "lastName": existing_data["lastName"],
                         "image": existing_data["image"],
                         "status": existing_data["status"],
                         "mobile": existing_data["mobile"],
@@ -261,9 +248,8 @@ class ServiceController:
                 "lastName": request.json["lastName"],
             }
             if "image" in request.json:
-                data["validations"] = {
-                    "selfie": {"image": request.json["image"]}
-                }
+                data["validations"] = {"selfie": {
+                    "image": request.json["image"]}}
             if all(
                 field in request.json for field in [
                     "firstName",
@@ -274,10 +260,7 @@ class ServiceController:
                 }
 
             url = f"{youverify}/v2/api/identity/ng/passport"
-            headers = {
-                'Content-Type': 'application/json',
-                'token': token
-            }
+            headers = {"Content-Type": "application/json", "token": token}
             response = requests.post(url, headers=headers, json=data)
             response_data = response.json()
 
@@ -288,9 +271,9 @@ class ServiceController:
             response_data = {
                 "data": {
                     "_id": new_entry["id"],
-                    "firstName": new_entry['firstName'],
-                    "middleName": new_entry['middleName'],
-                    "lastName": new_entry['lastName'],
+                    "firstName": new_entry["firstName"],
+                    "middleName": new_entry["middleName"],
+                    "lastName": new_entry["lastName"],
                     "image": new_entry["image"],
                     "status": new_entry["status"],
                     "mobile": new_entry["mobile"],
@@ -315,9 +298,9 @@ class ServiceController:
                 response_data = {
                     "data": {
                         "_id": existing_data["id"],
-                        "firstName": existing_data['firstName'],
-                        "middleName": existing_data['middleName'],
-                        "lastName": existing_data['lastName'],
+                        "firstName": existing_data["firstName"],
+                        "middleName": existing_data["middleName"],
+                        "lastName": existing_data["lastName"],
                         "image": existing_data["image"],
                         "nin": existing_data["nin"],
                         "status": existing_data["status"],
@@ -328,31 +311,22 @@ class ServiceController:
                 print("data from database")
                 return jsonpickle.encode(response_data)
 
-            lastName = request.form.get('lastName')
-            firstName = request.form.get('firstName')
-            dateOfBirth = request.form.get('dateOfBirth')
-            image = request.form.get('image')
+            lastName = request.form.get("lastName")
+            firstName = request.form.get("firstName")
+            dateOfBirth = request.form.get("dateOfBirth")
+            image = request.form.get("image")
 
-            data = {
-                "mobile": mobile,
-                "isSubjectConsent": "true"
-            }
+            data = {"mobile": mobile, "isSubjectConsent": "true"}
             if image:
-                data["validations"] = {
-                    "selfie": {
-                        "image": request.json["image"]
-                    }
-                }
+                data["validations"] = {"selfie": {
+                    "image": request.json["image"]}}
             if firstName and lastName and dateOfBirth:
                 data["validations"]["data"] = {
                     "firstName": request.json["firstName"],
                     "lastName": request.json["lastName"],
-                    "dateOfBirth": request.json["dateOfBirth"]
+                    "dateOfBirth": request.json["dateOfBirth"],
                 }
-            headers = {
-                'Content-Type': 'application/json',
-                'token': token
-            }
+            headers = {"Content-Type": "application/json", "token": token}
 
             url = f"{youverify}v2/api/identity/ng/nin-phone"
             response = requests.post(url, headers=headers, json=data)
@@ -365,13 +339,13 @@ class ServiceController:
             response_data = {
                 "data": {
                     "_id": new_entry["id"],
-                    "firstName": new_entry['firstName'],
-                    "middleName": new_entry['middleName'],
-                    "lastName": new_entry['lastName'],
+                    "firstName": new_entry["firstName"],
+                    "middleName": new_entry["middleName"],
+                    "lastName": new_entry["lastName"],
                     "image": new_entry["image"],
                     "status": new_entry["status"],
                     "mobile": new_entry["mobile"],
-                    "requestTime": datetime.utcnow().isoformat()
+                    "requestTime": datetime.utcnow().isoformat(),
                 },
             }
             print("data from database")
@@ -387,14 +361,11 @@ class ServiceController:
             data = {
                 "image1": request.json["image1"],
                 "image2": request.json["image2"],
-                "isSubjectConsent": True
+                "isSubjectConsent": True,
             }
 
             url = f"{youverify}v2/api/identity/compare-image"
-            headers = {
-                'Content-Type': 'application/json',
-                'token': token
-            }
+            headers = {"Content-Type": "application/json", "token": token}
             print("hello")
 
             response = requests.post(url, headers=headers, json=data)
@@ -433,12 +404,9 @@ class ServiceController:
             data = {
                 "registrationNumber": cac,
                 "countryCode": "NG",
-                "isSubjectConsent": "true"
+                "isSubjectConsent": "true",
             }
-            headers = {
-                'Content-Type': 'application/json',
-                'token': token
-            }
+            headers = {"Content-Type": "application/json", "token": token}
 
             url = f"{youverify}v2/api/verifications/global/company-advance-check"
             response = requests.post(url, headers=headers, json=data)
@@ -452,7 +420,7 @@ class ServiceController:
                 "data": {
                     "_id": new_entry["id"],
                     "status": new_entry["status"],
-                    "requestTime": datetime.utcnow().isoformat()
+                    "requestTime": datetime.utcnow().isoformat(),
                 },
             }
             print("data from database")

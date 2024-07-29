@@ -6,7 +6,6 @@ from passlib.hash import pbkdf2_sha256
 from flask_jwt_extended import (
     create_access_token,
     create_refresh_token,
-    decode_token,
     get_jwt_identity,
     jwt_required,
     get_jwt,
@@ -30,9 +29,7 @@ class AuthController:
             "first_name": request.json["first_name"],
             "last_name": request.json["last_name"],
             "email": request.json["email"],
-            "password": pbkdf2_sha256.hash(
-                request.json["password"]
-            ),
+            "password": pbkdf2_sha256.hash(request.json["password"]),
             "wallet": 0,
         }
 
@@ -99,7 +96,7 @@ class AuthController:
     @staticmethod
     def verify_sms(request):
         app_id = request.json["app_id"]
-        document = ClientApp.find_by_app_id(app_id)
+        # document = ClientApp.find_by_app_id(app_id)
         user_otp = request.json["otp"]
         otp_request_id = request.json["otp_request_id"]
 

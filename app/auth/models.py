@@ -1,4 +1,4 @@
-import uuid
+
 from passlib.hash import pbkdf2_sha256
 from flask import current_app as app
 from ..utils.otp_handler import otp_handler
@@ -104,7 +104,6 @@ class ServiceCharge:
             "e-attendance": 0,
             "e-census": 0,
             "kyc": 0,
-
         }
         # self.charges = 0
 

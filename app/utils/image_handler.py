@@ -32,7 +32,8 @@ class Images:
 
             # Upscale the image
             upscaled_image = cv2.resize(
-                image, (new_width, new_height), interpolation=cv2.INTER_CUBIC)
+                image, (new_width, new_height), interpolation=cv2.INTER_CUBIC
+            )
         else:
             upscaled_image = face_recognition.load_image_file(BytesIO(byte))
 

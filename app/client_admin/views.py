@@ -1,29 +1,29 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from .controllers import ClientAdminController
 
-client_admin = Blueprint('client_admin', __name__)
+client_admin = Blueprint("client_admin", __name__)
 
 
-@client_admin.route('/<endpoint>')
+@client_admin.route("/<endpoint>")
 @jwt_required()
 def admin_websocket(endpoint):
     return ClientAdminController.admin_websocket(endpoint)
 
 
-@client_admin.route('/get-user-details', methods=['POST'])
+@client_admin.route("/get-user-details", methods=["POST"])
 @jwt_required()
 def get_user_details():
     return ClientAdminController.get_user_details(request)
 
 
-@client_admin.route('/dashboard/all-data', methods=['GET'])
+@client_admin.route("/dashboard/all-data", methods=["GET"])
 @jwt_required()
 def dashboard():
     return ClientAdminController.dashboard()
 
 
-@client_admin.route('/dashboard/all-data-with-date', methods=['GET'])
+@client_admin.route("/dashboard/all-data-with-date", methods=["GET"])
 @jwt_required()
 def dashboard_date():
     return ClientAdminController.dashboard_date()
@@ -40,7 +40,7 @@ def delete_app():
     return ClientAdminController.delete_app(request)
 
 
-@client_admin.route('/update-app', methods=['PUT'])
+@client_admin.route("/update-app", methods=["PUT"])
 @jwt_required()
 def update_user_details():
     return ClientAdminController.update_app(request)

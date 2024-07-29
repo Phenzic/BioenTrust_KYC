@@ -17,5 +17,7 @@ def admin_required(refresh=False):
             except KeyError:
                 return jsonify({"msg": "Admin role required"}), 403
             return func(*args, **kwargs)
+
         return wrapper
+
     return decorator

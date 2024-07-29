@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import JWTManager, jwt_required
-from app.utils.token_handler import is_access_token_revoked, is_refresh_token_revoked
+from app.utils.token_handler import is_access_token_revoked
 from .controllers import AuthController
 
 jwt = JWTManager()

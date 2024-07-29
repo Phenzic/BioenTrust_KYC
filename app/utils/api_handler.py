@@ -18,7 +18,6 @@ class HMACHelper:
 
     def verify_key(self, key, signature):
         expected_signature = hmac.new(
-            self.secret_key,
-            key.encode(),
-            hashlib.sha256).hexdigest()
+            self.secret_key, key.encode(), hashlib.sha256
+        ).hexdigest()
         return hmac.compare_digest(expected_signature, signature)

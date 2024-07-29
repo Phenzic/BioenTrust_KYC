@@ -1,4 +1,3 @@
-
 import uuid
 from .models import AppModel
 from flask import jsonify, request
@@ -26,7 +25,7 @@ class AppController:
             "verification": request.json["verification"],
             "user_information": request.json["user_information"],
             "on_verification": request.json["on_verification"],
-            "redirect_url": request.json["redirect_url"]
+            "redirect_url": request.json["redirect_url"],
         }
 
         user = AppModel.find_by_user_id(user_id)
@@ -38,5 +37,7 @@ class AppController:
         if result.modified_count == 0:
             return jsonify({"error": "Failed to add app to user"}), 500
 
-        return jsonify({"status": "App added successfully",
-                       "app_id": app_data["app_id"]}), 201
+        return (
+            jsonify({"status": "App added successfully", "app_id": app_data["app_id"]}),
+            201,
+        )

@@ -1,4 +1,3 @@
-
 from flask import Blueprint, jsonify
 from .controllers import AppController
 
@@ -20,6 +19,6 @@ def home():
     return jsonify(error_message), 500
 
 
-@c_app.route('/create-app', methods=['POST'])
+@c_app.route("/create-app", methods=["POST"])
 def create_app():
     return AppController.create_app()

@@ -1,4 +1,3 @@
-from pymongo import MongoClient
 from flask import current_app as app
 
 
@@ -33,7 +32,8 @@ class AdminModel:
     def update_carges(client_id, new_user_service_charge):
         db = app.db.users
         return db["service_charges"].update_one(
-            {"_id": client_id}, new_user_service_charge)
+            {"_id": client_id}, new_user_service_charge
+        )
 
     @staticmethod
     def find_transaction_by_id(client_id):

@@ -1,5 +1,5 @@
 from functools import wraps
-from flask import request, jsonify
+from flask import jsonify
 from flask_jwt_extended import get_jwt, verify_jwt_in_request
 from . import redis_client
 

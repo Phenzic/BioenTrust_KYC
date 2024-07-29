@@ -1,5 +1,4 @@
 from random import randint
-import os
 from . import redis_client
 
 

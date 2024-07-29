@@ -1,4 +1,3 @@
-from pymongo import MongoClient
 from flask import current_app as app
 
 
