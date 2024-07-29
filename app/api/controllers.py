@@ -36,8 +36,8 @@ class APIController:
             if helper.verify_key(api_key, secret_key):
                 return jsonify(logs), 200
             return jsonify(
-                {"message": f"Invalid API key, Use a Sandbox API key"}), 403
-        return jsonify({"message": f"No logs found for this API key"}), 404
+                {"message": "Invalid API key, Use a Sandbox API key"}), 403
+        return jsonify({"message": "No logs found for this API key"}), 404
 
     @staticmethod
     def get_live_api_logs(api_key):
@@ -49,8 +49,8 @@ class APIController:
             if helper.verify_key(api_key, secret_key):
                 return jsonify(logs), 200
             return jsonify(
-                {"message": f"Invalid API key, Use a Live API key"}), 403
-        return jsonify({"message": f"No logs found for this API key"}), 404
+                {"message": "Invalid API key, Use a Live API key"}), 403
+        return jsonify({"message": "No logs found for this API key"}), 404
 
     @staticmethod
     def create_sandbox_key(user_id):
