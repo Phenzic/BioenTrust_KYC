@@ -1,4 +1,4 @@
-from flask import jsonify, request
+from flask import jsonify
 from flask import current_app as app
 from flask_jwt_extended import get_jwt_identity
 from ..utils.wallet_handler import Wallet
