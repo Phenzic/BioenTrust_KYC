@@ -3,6 +3,7 @@ import uuid
 from flask import current_app as app, jsonify
 import requests
 
+
 class ClientAdminModels:
 
     @staticmethod
@@ -23,9 +24,13 @@ class ClientAdminModels:
         return app.db.users["service_charges"].find_one({"_id": client_id})
 
     @staticmethod
-    def update_client_user_status(client_id, user_id, new_status, new_status_description):
-        return app.db.client["client_app"].update_one({"_id": client_id, "client_users.user_id": user_id},
-                            {"$set": {"client_users.$.status": new_status, "client_users.$.status_description": new_status_description}})
+    def update_client_user_status(
+            client_id,
+            user_id,
+            new_status,
+            new_status_description):
+        return app.db.client["client_app"].update_one({"_id": client_id, "client_users.user_id": user_id}, {
+                                                      "$set": {"client_users.$.status": new_status, "client_users.$.status_description": new_status_description}})
 
     @staticmethod
     def get_client_apps(client_id):
@@ -51,18 +56,26 @@ class ClientAdminModels:
     #         "redirect_url": redirect_url
     #     }
 
-    #     return app.db.client_app.update_one({"_id": client_id}, {"$push": {"apps": app_entry}})
+    # return app.db.client_app.update_one({"_id": client_id}, {"$push":
+    # {"apps": app_entry}})
     @staticmethod
     def get_app_by_id(app_id):
-        return jsonify(app.db.client["client_app"].find_one({"apps.app_id": app_id}, {"apps.$": 1}))
-
+        return jsonify(app.db.client["client_app"].find_one(
+            {"apps.app_id": app_id}, {"apps.$": 1}))
 
     @staticmethod
     def delete_app_by_id(client_id, app_id):
-        return app.db.client["client_app"].update_one({"_id": client_id}, {"$pull": {"apps": {"app_id": app_id}}})
+        return app.db.client["client_app"].update_one(
+            {"_id": client_id}, {"$pull": {"apps": {"app_id": app_id}}})
 
     @staticmethod
-    def log_wallet_transaction(client_id, transaction_type, amount, old_balance, new_balance, status):
+    def log_wallet_transaction(
+            client_id,
+            transaction_type,
+            amount,
+            old_balance,
+            new_balance,
+            status):
         transaction = {
             "user_id": client_id,
             "transaction_type": transaction_type,
@@ -80,9 +93,5 @@ class ClientAdminModels:
 
     @staticmethod
     def update_wallet_balance(client_id, new_balance):
-        return app.db.users["user"].update_one({"_id": client_id}, {"$set": {"wallet": new_balance}})
-
-
-
-
-
+        return app.db.users["user"].update_one(
+            {"_id": client_id}, {"$set": {"wallet": new_balance}})
