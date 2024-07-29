@@ -21,19 +21,19 @@ class ClientAdminModels:
     def get_service_charge(client_id):
         return app.db.users["service_charges"].find_one({"_id": client_id})
 
-    @staticmethod
-    def update_client_user_status(
-        client_id, user_id, new_status, new_status_description
-    ):
-        return app.db.client["client_app"].update_one(
-            {"_id": client_id, "client_users.user_id": user_id},
-            {
-                "$set": {
-                    "client_users.$.status": new_status,
-                    "client_users.$.status_description": new_status_description,
-                }
-            },
-        )
+    # @staticmethod
+    # def update_client_user_status(
+    #     client_id, user_id, new_status, new_status_description
+    # ):
+    #     return app.db.client["client_app"].update_one(
+    #         {"_id": client_id, "client_users.user_id": user_id},
+    #         {
+    #             "$set": {
+    #                 "client_users.$.status": new_status,
+    #                 "client_users.$.status_description": new_status_description,
+    #             }
+    #         },
+    #     )
 
     @staticmethod
     def get_client_apps(client_id):
@@ -63,8 +63,9 @@ class ClientAdminModels:
     # {"apps": app_entry}})
     @staticmethod
     def get_app_by_id(app_id):
-        return jsonify(app.db.client["client_app"].find_one(
-            {"apps.app_id": app_id}, {"apps.$": 1}))
+        return jsonify(
+            app.db.client["client_app"].find_one({"apps.app_id": app_id}, {"apps.$": 1})
+        )
 
     @staticmethod
     def delete_app_by_id(client_id, app_id):

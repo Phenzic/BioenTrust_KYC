@@ -67,8 +67,15 @@ class AdminController:
                 refresh_token = create_refresh_token(
                     identity=admin["_id"], additional_claims={"role": "admin"}
                 )
-                return (jsonify({"message": "Logged In", "token": {
-                    "access": access_token, "refresh": refresh_token}, }), 200, )
+                return (
+                    jsonify(
+                        {
+                            "message": "Logged In",
+                            "token": {"access": access_token, "refresh": refresh_token},
+                        }
+                    ),
+                    200,
+                )
             else:
                 return jsonify({"error": "Invalid email or password"}), 401
         except Exception as e:
@@ -79,8 +86,7 @@ class AdminController:
         verifications = AdminModel.get_all_client_users
         verifications = list(verifications)
 
-        failed_verifications = [
-            x for x in verifications if x["status"] == "Failed"]
+        failed_verifications = [x for x in verifications if x["status"] == "Failed"]
         successful_verifications = [
             x for x in verifications if x["status"] == "Success"
         ]

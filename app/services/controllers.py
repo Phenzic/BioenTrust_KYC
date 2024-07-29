@@ -48,8 +48,7 @@ class ServiceController:
                 "isSubjectConsent": True,
             }
             if "image" in request.json:
-                data["validations"] = {"selfie": {
-                    "image": request.json["image"]}}
+                data["validations"] = {"selfie": {"image": request.json["image"]}}
             if all(
                 field in request.json
                 for field in ["firstName", "lastName", "dateOfBirth"]
@@ -117,8 +116,7 @@ class ServiceController:
                 "isSubjectConsent": True,
             }
             if "image" in request.json:
-                data["validations"] = {"selfie": {
-                    "image": request.json["image"]}}
+                data["validations"] = {"selfie": {"image": request.json["image"]}}
             if all(
                 field in request.json
                 for field in ["firstName", "lastName", "dateOfBirth"]
@@ -182,8 +180,7 @@ class ServiceController:
                 "isSubjectConsent": True,
             }
             if "image" in request.json:
-                data["validations"] = {"selfie": {
-                    "image": request.json["image"]}}
+                data["validations"] = {"selfie": {"image": request.json["image"]}}
             if all(
                 field in request.json
                 for field in ["firstName", "lastName", "dateOfBirth"]
@@ -248,12 +245,8 @@ class ServiceController:
                 "lastName": request.json["lastName"],
             }
             if "image" in request.json:
-                data["validations"] = {"selfie": {
-                    "image": request.json["image"]}}
-            if all(
-                field in request.json for field in [
-                    "firstName",
-                    "dateOfBirth"]):
+                data["validations"] = {"selfie": {"image": request.json["image"]}}
+            if all(field in request.json for field in ["firstName", "dateOfBirth"]):
                 data.setdefault("validations", {})["data"] = {
                     "firstName": request.json["firstName"],
                     "dateOfBirth": request.json["dateOfBirth"],
@@ -291,8 +284,7 @@ class ServiceController:
             mobile = request.json["mobile"]
             print(mobile)
 
-            existing_data = ServiceModel.find_data_by_id(
-                "vault", {"idNumber": mobile})
+            existing_data = ServiceModel.find_data_by_id("vault", {"idNumber": mobile})
 
             if existing_data:
                 response_data = {
@@ -318,8 +310,7 @@ class ServiceController:
 
             data = {"mobile": mobile, "isSubjectConsent": "true"}
             if image:
-                data["validations"] = {"selfie": {
-                    "image": request.json["image"]}}
+                data["validations"] = {"selfie": {"image": request.json["image"]}}
             if firstName and lastName and dateOfBirth:
                 data["validations"]["data"] = {
                     "firstName": request.json["firstName"],

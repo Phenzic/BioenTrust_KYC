@@ -10,10 +10,7 @@ class HMACHelper:
 
     def generate_key(self):
         key = binascii.hexlify(os.urandom(24)).decode()
-        signature = hmac.new(
-            self.secret_key,
-            key.encode(),
-            hashlib.sha256).hexdigest()
+        signature = hmac.new(self.secret_key, key.encode(), hashlib.sha256).hexdigest()
         return key, signature
 
     def verify_key(self, key, signature):

@@ -14,8 +14,7 @@ class ClientAdminController:
             data = {}
             client_profile = ClientAdminModels.get_client_profile(client_id)
             client_data = app.db.client_user.find_one({"user_id": client_id})
-            client_user_data = ClientAdminModels.get_client_user_data(
-                client_id)
+            client_user_data = ClientAdminModels.get_client_user_data(client_id)
             charges_data = ClientAdminModels.get_service_charge(client_id)
 
             if endpoint == "verifications":
@@ -37,23 +36,22 @@ class ClientAdminController:
     @staticmethod
     def get_user_details(request):
         client_user_id = request.json["user_id"]
-        app.db.vaults["vault"].find_one(
-            {"user_id": client_user_id})
+        app.db.vaults["vault"].find_one({"user_id": client_user_id})
         return jsonify(
             {"user_data": ClientAdminModels.get_user_details(client_user_id)}
         )
 
-    @staticmethod
-    def update_app():
-        client_id = get_jwt_identity()
-        user_id = request.json["user_id"]
-        new_status = request.json["status"]
-        new_status_description = request.json["status_description"]
-        ClientAdminModels.update_client_user_status(
-            client_id, user_id, new_status, new_status_description
-        )
-        client_profile = ClientAdminModels.get_client_profile(client_id)
-        return jsonify(client_profile)
+    # @staticmethod
+    # def update_app(request):
+    #     client_id = get_jwt_identity()
+    #     user_id = request.json["user_id"]
+    #     new_status = request.json["status"]
+    #     new_status_description = request.json["status_description"]
+    #     ClientAdminModels.update_client_user_status(
+    #         client_id, user_id, new_status, new_status_description
+    #     )
+    #     client_profile = ClientAdminModels.get_client_profile(client_id)
+    #     return jsonify(client_profile)
 
     @staticmethod
     def dashboard():
@@ -78,8 +76,7 @@ class ClientAdminController:
         user = app.db.users["user"].find_one({"_id": client_id})
         transaction_amount = request.json["amount"]
         old_wallet_balance = {"wallet": user["wallet"]}
-        new_wallet_balance = int(
-            old_wallet_balance["wallet"]) + int(transaction_amount)
+        new_wallet_balance = int(old_wallet_balance["wallet"]) + int(transaction_amount)
 
         new_wallet_balance = {"$set": {"wallet": new_wallet_balance}}
 
@@ -155,11 +152,9 @@ class ClientAdminController:
         # Update operation using $pull
         update_query = {"$pull": {"apps": {"app_id": desired_app_id}}}
 
-        app.db.client["client_app"].update_one(
-            {"_id": client_id}, update_query)
+        app.db.client["client_app"].update_one({"_id": client_id}, update_query)
 
-        client_apps_details = app.db.client["client_app"].find_one(
-            {"_id": client_id})
+        client_apps_details = app.db.client["client_app"].find_one({"_id": client_id})
 
         return jsonify(client_apps_details)
 

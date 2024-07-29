@@ -40,10 +40,10 @@ def delete_app():
     return ClientAdminController.delete_app(request)
 
 
-@client_admin.route("/update-app", methods=["PUT"])
-@jwt_required()
-def update_user_details():
-    return ClientAdminController.update_app(request)
+# @client_admin.route("/update-app", methods=["PUT"])
+# @jwt_required()
+# def update_user_details(request):
+#     return ClientAdminController.update_app(request)
 
 
 @client_admin.route("/fund", methods=["POST"])

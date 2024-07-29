@@ -38,8 +38,7 @@ class AuthController:
 
         password = request.json["password"]
         if len(password) < 8:
-            return jsonify(
-                {"error": "Password should be more than 7 characters"}), 400
+            return jsonify({"error": "Password should be more than 7 characters"}), 400
 
         new_user = User(**user)
         otp_request_id = uuid.uuid4().hex
@@ -47,8 +46,7 @@ class AuthController:
         redis_handler.save_otp(otp_request_id, email_otp, new_user.to_dict())
         otp_handler.send_otp(email_otp, user["email"])
 
-        return jsonify(
-            {"otp_request_id": otp_request_id, "response": "otp sent"})
+        return jsonify({"otp_request_id": otp_request_id, "response": "otp sent"})
 
     @staticmethod
     def verify_email(request):
@@ -72,8 +70,15 @@ class AuthController:
             access_token = create_access_token(identity=new_user._id)
             refresh_token = create_refresh_token(identity=new_user._id)
 
-            return (jsonify({"message": "Logged In", "token": {
-                "access": access_token, "refresh": refresh_token}, }), 200, )
+            return (
+                jsonify(
+                    {
+                        "message": "Logged In",
+                        "token": {"access": access_token, "refresh": refresh_token},
+                    }
+                ),
+                200,
+            )
         else:
             return jsonify({"error": "Signup Failed"}), 401
 
@@ -88,8 +93,15 @@ class AuthController:
         if user and pbkdf2_sha256.verify(password, user["password"]):
             access_token = create_access_token(identity=user["_id"])
             refresh_token = create_refresh_token(identity=user["_id"])
-            return (jsonify({"message": "Logged In", "token": {
-                "access": access_token, "refresh": refresh_token}, }), 200, )
+            return (
+                jsonify(
+                    {
+                        "message": "Logged In",
+                        "token": {"access": access_token, "refresh": refresh_token},
+                    }
+                ),
+                200,
+            )
 
         return jsonify({"error": "Invalid login credentials"}), 401
 
@@ -149,8 +161,7 @@ class AuthController:
         jti = token["jti"]
         ttype = token["type"]
         TokenBlocklist.add_to_blocklist(jti, Config.ACCESS_EXPIRES)
-        return jsonify(
-            msg=f"{ttype.capitalize()} token successfully revoked"), 200
+        return jsonify(msg=f"{ttype.capitalize()} token successfully revoked"), 200
 
     @staticmethod
     @jwt_required(refresh=True)
@@ -192,8 +203,7 @@ class AuthController:
             ),
         )
 
-        return jsonify(
-            {"message": "Password reset link sent to your email"}), 200
+        return jsonify({"message": "Password reset link sent to your email"}), 200
 
     @staticmethod
     @jwt_required()

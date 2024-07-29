@@ -1,4 +1,3 @@
-
 from flask import jsonify
 from ..auth.models import ClientApp
 from .models import APIModel
@@ -35,8 +34,7 @@ class APIController:
             secret_key = logs["api_data"][0]["secret_key"]
             if helper.verify_key(api_key, secret_key):
                 return jsonify(logs), 200
-            return jsonify(
-                {"message": "Invalid API key, Use a Sandbox API key"}), 403
+            return jsonify({"message": "Invalid API key, Use a Sandbox API key"}), 403
         return jsonify({"message": "No logs found for this API key"}), 404
 
     @staticmethod
@@ -48,8 +46,7 @@ class APIController:
             secret_key = logs["api_data"][0]["secret_key"]
             if helper.verify_key(api_key, secret_key):
                 return jsonify(logs), 200
-            return jsonify(
-                {"message": "Invalid API key, Use a Live API key"}), 403
+            return jsonify({"message": "Invalid API key, Use a Live API key"}), 403
         return jsonify({"message": "No logs found for this API key"}), 404
 
     @staticmethod
@@ -75,7 +72,8 @@ class APIController:
                     "status": "Sandbox API key and secret key created and stored successfully",
                     "api_key": api_key,
                     "secret_key": secret_key,
-                }),
+                }
+            ),
             201,
         )
 
@@ -101,19 +99,18 @@ class APIController:
                     "status": "Live API key and secret key created and stored successfully",
                     "api_key": api_key,
                     "secret_key": secret_key,
-                }),
+                }
+            ),
             201,
         )
 
     @staticmethod
     def delete_sandbox_key(user_id, api_key, secret_key):
-        return APIController._delete_key(
-            user_id, api_key, secret_key, "sandbox_keys")
+        return APIController._delete_key(user_id, api_key, secret_key, "sandbox_keys")
 
     @staticmethod
     def delete_live_key(user_id, api_key, secret_key):
-        return APIController._delete_key(
-            user_id, api_key, secret_key, "live_keys")
+        return APIController._delete_key(user_id, api_key, secret_key, "live_keys")
 
     @staticmethod
     def _delete_key(user_id, api_key, secret_key, key_type):
