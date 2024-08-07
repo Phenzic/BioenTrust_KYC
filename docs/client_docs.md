@@ -3,7 +3,16 @@
 
 ## Table of Contents
 - [Endpoints](#endpoints)
-  - [Create App](#post-apicreate_app)
+  - [Admin Webscket](#admin-websocket)
+  - [Get User Details](#get-user-details)
+  - [Dashboard all-data](#get-dashboardall-data)
+  - [Wallet Trabsactions](#get-wallet_transactionsuser_id)
+  - [Fund Wallet](#post-fund)
+  - [Dashboard by date](#get-dashboard_date)
+  - [Delete app](#delete-delete_app)
+  - [Get app](#post-get-app)
+  - [Get Clinet Profile](#get-get-client-profile)
+
 
 
 ## Base URL
