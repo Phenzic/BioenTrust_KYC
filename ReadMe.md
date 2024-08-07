@@ -117,7 +117,7 @@ Configuration settings can be adjusted in the `/config` dir. Make sure to set th
 
 ## User Requests
 
-For detailed information about the User APIs, refer to the [User Documentation](./docs/signup_docs.md).
+For detailed information about the User APIs, refer to the [User Documentation](./docs/auth.md).
 
  ## API Requests
 
@@ -128,11 +128,11 @@ For detailed information about the API-Key APIs, refer to the [API Documentation
 For detailed information about the App APIs, refer to the [APP Documentation](./docs/app_docs.md).
 
 
-<!--  ## Article API Documentation
+## Client Admin Documentation
 
-For detailed information about the article APIs, refer to the [Article API Documentation](./docs/article_endpoints.md).
+For detailed information about the Client Admin APIs, refer to the [Client Admin Documentation](./docs/client_docs.md).
 
-## Comment API Documentation
+<!-- ## Comment API Documentation
 
 For detailed information about the comment APIs, refer to the [Comment API Documentation](./docs/comments_endpoints.md).
 

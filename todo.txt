@@ -12,8 +12,16 @@
     - get wallet transactions ✅
 
 - authentication Endpoints
-- client-admin Endpoints
-- client-app Endpoints
+    - signin
+    - signup
+    - verify_email
+    - verify-sms
+    - signout
+    - forgot_password
+    - reset_password
+
+- client-admin Endpoints ✅
+- client-app Endpoints ✅
 - Services Endpoints
 - KYC Verification Endpoints
-- Api Endpoints
+- Api Endpoints ✅

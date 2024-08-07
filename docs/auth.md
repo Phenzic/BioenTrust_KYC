@@ -314,7 +314,7 @@ Resets the user's password using the provided token.
 
 #### Request
 - Method: `POST`
-- URL: `/user/reset-password`
+- URL: `/auth/reset-password`
 - Body: JSON
 - Requires Bearer Authentication (access-token)
 
