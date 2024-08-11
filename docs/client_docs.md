@@ -1,6 +1,5 @@
 # Client Admin Documentation
 
-
 ## Table of Contents
 - [Endpoints](#endpoints)
   - [Admin Webscket](#admin-websocket)
@@ -110,7 +109,7 @@ Fetches dashboard data, including counts of different statuses.
   }
   ```
 
-### 4. Get Wallet Transactions
+### Get Wallet Transactions
 #### `GET /wallet_transactions/<user_id>`
 Fetches wallet transactions for a user.
 
