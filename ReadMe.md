@@ -150,10 +150,6 @@ For detailed information about the Community APIs, refer to the [Community API D
 
 For detailed information about the Data APIs, refer to the [Data API Documentation](./docs/data_endpoints.md).
 
-## Beta Test Feedback API Documentation
-
-For detailed information about the beta testing feedback APIs, refer to the [Beta Test Feedback API Documentation](./docs/feedback_endpoints.md). -->
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details.
